@@ -527,7 +527,7 @@ import HomeNavBar from '../../nav-bar/HomeNavBar';
 // import MessageNavBar from '../../nav-bar/MessageNavBar';
 import MusicPlayer from '../../components/music-player-comp/MusicPlayer';
 import Memories from '../../components/memories-comp/Memories';
-import DiaryModal from '../../components/DiaryModal';
+// import DiaryModal from '../../components/DiaryModal';
 import Slideshow from '../../components/memories-comp/Slideshow';
 // import MusicPlayerTab from '../../components/music-player-comp/MusicPlayerTab';
 // import PlayerCore from '../../components/music-player-comp/PlayerCore';
