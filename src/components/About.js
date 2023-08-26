@@ -135,26 +135,6 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    C
-                                </Tag>
-                            </WrapItem>
-                            <WrapItem>
-                                <Tag
-                                    size="sm"
-                                    variant="solid"
-                                    color={textColors}
-                                    bg={titleBar}
-                                >
-                                    C#
-                                </Tag>
-                            </WrapItem>
-                            <WrapItem>
-                                <Tag
-                                    size="sm"
-                                    variant="solid"
-                                    color={textColors}
-                                    bg={titleBar}
-                                >
                                     Javascript
                                 </Tag>
                             </WrapItem>
@@ -196,16 +176,6 @@ const About = ({ theme }) => {
                                     bg={titleBar}
                                 >
                                     React.js
-                                </Tag>
-                            </WrapItem>
-                            <WrapItem>
-                                <Tag
-                                    size="sm"
-                                    variant="solid"
-                                    color={textColors}
-                                    bg={titleBar}
-                                >
-                                    Next.js
                                 </Tag>
                             </WrapItem>
                             <WrapItem>
