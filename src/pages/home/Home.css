@@ -1,0 +1,11 @@
+/* Home.css */
+
+/* Hide the second panel by default */
+.SecondPanel {
+    display: none;
+}
+
+/* Show the second panel when the show-panel class is applied */
+.show-panel .SecondPanel {
+    display: block;
+}
