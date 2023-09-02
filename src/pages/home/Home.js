@@ -493,18 +493,9 @@ import {
     VStack,
     HStack,
     useColorModeValue,
-    Link as ChakraLink,
+    // Link as ChakraLink,
     Text,
     Stack,
-    Icon,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    useDisclosure,
     useMediaQuery,
     Grid,
     GridItem,
@@ -512,15 +503,15 @@ import {
     IconButton,
     useColorMode
 } from '@chakra-ui/react';
-import { FaEnvelope } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+// import { FaEnvelope } from 'react-icons/fa';
+// import { Link } from 'react-router-dom';
 // import DIARY from '../../assets/diary.png';
 
 import PDF from '../../assets/pdf.png';
 import GMAIL from '../../assets/gmail.png';
 
-import soundEffect1 from '../../assets/button_click_1.mp3';
-import soundEffect2 from '../../assets/button_click_2.mp3';
+// import soundEffect1 from '../../assets/button_click_1.mp3';
+// import soundEffect2 from '../../assets/button_click_2.mp3';
 
 import LandingPageNavBarCore from '../../nav-bar/LandingPageNavBarCore';
 import HomeNavBar from '../../nav-bar/HomeNavBar';
@@ -528,15 +519,15 @@ import HomeNavBar from '../../nav-bar/HomeNavBar';
 import MusicPlayer from '../../components/music-player-comp/MusicPlayer';
 import Memories from '../../components/memories-comp/Memories';
 // import DiaryModal from '../../components/DiaryModal';
-import Slideshow from '../../components/memories-comp/Slideshow';
+// import Slideshow from '../../components/memories-comp/Slideshow';
 // import MusicPlayerTab from '../../components/music-player-comp/MusicPlayerTab';
 // import PlayerCore from '../../components/music-player-comp/PlayerCore';
 
 const Home = () => {
     const bgColors = useColorModeValue('light.100', 'dark.300');
     const titleBar = useColorModeValue('light.400', 'dark.800');
-    const buttonColors = useColorModeValue('light.300', 'dark.200');
-    const textColors = useColorModeValue('light.1000', 'dark.100');
+    // const buttonColors = useColorModeValue('light.300', 'dark.200');
+    // const textColors = useColorModeValue('light.1000', 'dark.100');
 
     const [isLargeDevice] = useMediaQuery('(min-width: 960px)');
 
@@ -694,7 +685,7 @@ const Home = () => {
                                         >
                                             <VStack>
                                                 <a
-                                                    href="https://drive.google.com/file/d/1ssmMkihymg_eHK4hwYdHgI_EhGMWEWjo/view?usp=sharing"
+                                                    href="https://docs.google.com/document/d/1yZbLFwnkj3G_vOo46ojVfpv_4eJjNUBoSpNLe3iGX_k/edit?usp=sharing"
                                                     target="_blank"
                                                 >
                                                     <Box>

@@ -7,18 +7,17 @@ import {
     VStack,
     Text,
     Box,
-    useColorModeValue,
     Stack,
     useBreakpointValue
 } from '@chakra-ui/react';
 import Memories from '../../components/memories-comp/Memories';
 import MusicPlayer from '../../components/music-player-comp/MusicPlayer';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 import PDF from '../../assets/pdf.png';
 import GMAIL from '../../assets/gmail.png';
 
 const SecondPanel = ({ className }) => {
-    const bgColors = useColorModeValue('light.100', 'dark.300');
+    // const bgColors = useColorModeValue('light.100', 'dark.300');
 
     const templateAreas = useBreakpointValue({
         lg: `"memories music"
@@ -86,8 +85,9 @@ const SecondPanel = ({ className }) => {
                         >
                             <VStack>
                                 <a
-                                    href="https://drive.google.com/file/d/1ssmMkihymg_eHK4hwYdHgI_EhGMWEWjo/view?usp=sharing"
+                                    href="https://docs.google.com/document/d/1yZbLFwnkj3G_vOo46ojVfpv_4eJjNUBoSpNLe3iGX_k/edit?usp=sharing"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     <Box>
                                         <img src={PDF} />
@@ -109,9 +109,7 @@ const SecondPanel = ({ className }) => {
                     sm: 'column'
                 }}
                 spacing={{ lg: '0px', md: '0px', sm: '0px' }}
-            >
-                <HStack></HStack>
-            </Stack>
+            ></Stack>
         </Box>
     );
 };

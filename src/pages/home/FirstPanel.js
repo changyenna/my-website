@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Fade from 'react-reveal/Fade';
+import React from 'react';
+// import Fade from 'react-reveal/Fade';
 import { Box, useColorModeValue } from '@chakra-ui/react';
 
 import HomeNavBar from '../../nav-bar/HomeNavBar';
@@ -7,8 +7,8 @@ import HomeNavBar from '../../nav-bar/HomeNavBar';
 const FirstPanel = () => {
     const bgColors = useColorModeValue('light.100', 'dark.300');
     const titleBar = useColorModeValue('light.400', 'dark.800');
-    const buttonColors = useColorModeValue('light.300', 'dark.200');
-    const textColors = useColorModeValue('light.1000', 'dark.100');
+    // const buttonColors = useColorModeValue('light.300', 'dark.200');
+    // const textColors = useColorModeValue('light.1000', 'dark.100');
 
     return (
         <Box

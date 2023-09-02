@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import {
     Box,
     HStack,
@@ -17,10 +17,10 @@ import {
 import ME from '../assets/dukes2.jpg';
 import PIN from '../assets/pin.png';
 
-const playSoundEffect = (soundEffect) => {
-    const audio = new Audio(soundEffect);
-    audio.play();
-};
+// const playSoundEffect = (soundEffect) => {
+//     const audio = new Audio(soundEffect);
+//     audio.play();
+// };
 
 const About = ({ theme }) => {
     const bgColors = useColorModeValue('light.100', 'dark.300');

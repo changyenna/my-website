@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Box,
     VStack,
-    Badge,
     HStack,
     Center,
     useColorModeValue,
@@ -10,13 +9,8 @@ import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
     ModalFooter,
-    ModalBody,
-    ModalCloseButton,
     Button,
-    Grid,
-    GridItem,
     Wrap,
     WrapItem,
     Tag
@@ -36,11 +30,11 @@ const Modal3 = ({ isOpen, onClose, onOpen }) => {
     const titleBar = useColorModeValue('light.400', 'dark.800');
     const buttonColors = useColorModeValue('light.300', 'light.400');
     const textColors = useColorModeValue('light.1000', 'dark.100');
-    const f1Colors = useColorModeValue('#ffbde8', '#ffdaf1');
-    const f2Colors = useColorModeValue('#bde8ff', '#d8f0ff');
+    // const f1Colors = useColorModeValue('#ffbde8', '#ffdaf1');
+    // const f2Colors = useColorModeValue('#bde8ff', '#d8f0ff');
     const f3Colors = useColorModeValue('#e8ffbd', '#f0ffdb');
-    const f4Colors = useColorModeValue('#ffe8bd', '#fff2d1');
-    const f5Colors = useColorModeValue('#e8bdff', '#f4d1ff');
+    // const f4Colors = useColorModeValue('#ffe8bd', '#fff2d1');
+    // const f5Colors = useColorModeValue('#e8bdff', '#f4d1ff');
 
     const [scrollBehavior, setScrollBehavior] = React.useState('inside');
 

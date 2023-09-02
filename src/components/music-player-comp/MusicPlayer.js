@@ -1,19 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
     Box,
-    Button,
     VStack,
     HStack,
     useColorModeValue,
-    useMediaQuery,
-    Link as ChakraLink,
+    // Link as ChakraLink,
     Text
 } from '@chakra-ui/react';
 import { FaMusic } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
-import soundEffect1 from '../../assets/button_click_1.mp3';
-import soundEffect2 from '../../assets/button_click_2.mp3';
+// import soundEffect1 from '../../assets/button_click_1.mp3';
+// import soundEffect2 from '../../assets/button_click_2.mp3';
 import Player from './Player';
 
 // const playSoundEffect = (soundEffect) => {
@@ -24,9 +21,9 @@ import Player from './Player';
 const MusicPlayer = () => {
     const bgColors = useColorModeValue('light.100', 'dark.300');
     const titleBar = useColorModeValue('light.400', 'dark.800');
-    const buttonColors = useColorModeValue('light.300', 'light.400');
+    // const buttonColors = useColorModeValue('light.300', 'light.400');
     const textColors = useColorModeValue('light.1000', 'dark.100');
-    const button2Colors = useColorModeValue('light.200', 'dark.800');
+    // const button2Colors = useColorModeValue('light.200', 'dark.800');
 
     // const [isLargeDevice] = useMediaQuery('(min-width: 960px)');
 

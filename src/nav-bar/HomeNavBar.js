@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
     Box,
     Flex,
@@ -11,20 +11,16 @@ import {
     TabPanels,
     TabList,
     Tooltip,
-    Stack,
-    useColorModeValue,
-    useMediaQuery
+    useColorModeValue
 } from '@chakra-ui/react';
 import {
     AiOutlineArrowLeft,
     AiOutlineArrowRight,
-    AiOutlineReload,
-    AiFillHeart,
-    AiOutlineHeart
+    AiOutlineReload
 } from 'react-icons/ai';
 
-import Alert from '../pages/landing/Alert';
-import Message from '../pages/landing/Message';
+// import Alert from '../pages/landing/Alert';
+// import Message from '../pages/landing/Message';
 import Projects from '../components/projects-comp/Projects';
 import About from '../components/About';
 import Experience from '../components/Experience';
@@ -32,48 +28,29 @@ import Experience from '../components/Experience';
 const HomeNavBar = () => {
     const bgColors = useColorModeValue('light.100', 'dark.300');
     const titleBarColors = useColorModeValue('light.400', 'dark.800');
-    const buttonColors = useColorModeValue('light.300', 'dark.200');
-    const textColors = useColorModeValue('light.1000', 'dark.100');
+    // const buttonColors = useColorModeValue('light.300', 'dark.200');
+    // const textColors = useColorModeValue('light.1000', 'dark.100');
     const formColors = useColorModeValue('#FAFAFA', 'dark.800');
-    const plusColors = useColorModeValue('#FAB4DF', '#5D6071');
-    const bookmarkColors = useColorModeValue('yellow.400', 'light.400');
+    // const plusColors = useColorModeValue('#FAB4DF', '#5D6071');
+    // const bookmarkColors = useColorModeValue('yellow.400', 'light.400');
     const tabHighlightColors = useColorModeValue('black', 'purple');
 
     const pageData = [
         {
             url: 'https://www.linkedin.com/in/yenna-chang/',
-            title: 'About',
-            special: null,
-            info: 'https',
-            back_btn: true,
-            forward_btn: false,
-            bookmarked: true,
-            address_bar_selected: false
+            title: 'About'
         },
         {
             url: 'https://github.com/changyenna',
-            title: 'Portfolio',
-            special: 'Duck Duck Go, Inc. [US]',
-            info: 'https',
-            back_btn: true,
-            forward_btn: true,
-            bookmarked: false,
-            address_bar_selected: false
+            title: 'Portfolio'
         },
         {
-            url: 'https://drive.google.com/file/d/1ssmMkihymg_eHK4hwYdHgI_EhGMWEWjo/view?usp=sharing',
-            title: 'Experience',
-            special: null,
-            back_btn: false,
-            forward_btn: false,
-            bookmarked: false,
-            address_bar_selected: true
+            url: 'https://docs.google.com/document/d/1yZbLFwnkj3G_vOo46ojVfpv_4eJjNUBoSpNLe3iGX_k/edit?usp=sharing',
+            title: 'Experience'
         }
     ];
 
-    const handleTabChange = (index) => {
-        // Handle tab change logic here
-    };
+    const handleTabChange = (index) => {};
 
     const renderTabs = () => {
         return pageData.map((data, index) => (

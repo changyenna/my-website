@@ -1,7 +1,6 @@
 import React from 'react';
 import {
     Box,
-    Badge,
     VStack,
     HStack,
     Center,
@@ -10,12 +9,7 @@ import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
     ModalFooter,
-    Grid,
-    GridItem,
-    ModalBody,
-    ModalCloseButton,
     Button,
     Stack,
     Wrap,
@@ -39,10 +33,10 @@ const Modal1 = ({ isOpen, onClose, onOpen }) => {
     const buttonColors = useColorModeValue('light.300', 'light.400');
     const textColors = useColorModeValue('light.1000', 'dark.100');
     const f1Colors = useColorModeValue('#ffbde8', '#ffdaf1');
-    const f2Colors = useColorModeValue('#bde8ff', '#d8f0ff');
-    const f3Colors = useColorModeValue('#e8ffbd', '#f0ffdb');
-    const f4Colors = useColorModeValue('#ffe8bd', '#fff2d1');
-    const f5Colors = useColorModeValue('#e8bdff', '#f4d1ff');
+    // const f2Colors = useColorModeValue('#bde8ff', '#d8f0ff');
+    // const f3Colors = useColorModeValue('#e8ffbd', '#f0ffdb');
+    // const f4Colors = useColorModeValue('#ffe8bd', '#fff2d1');
+    // const f5Colors = useColorModeValue('#e8bdff', '#f4d1ff');
 
     return (
         <>

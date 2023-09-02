@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
-import {
-    Box,
-    VStack,
-    HStack,
-    useColorModeValue,
-    useMediaQuery,
-    Text
-} from '@chakra-ui/react';
+import React from 'react';
+import { Box, VStack, HStack, useColorModeValue, Text } from '@chakra-ui/react';
 import { FaCamera } from 'react-icons/fa';
 import Slideshow from './Slideshow';
 
 const Memories = () => {
     const bgColors = useColorModeValue('light.100', 'dark.300');
     const titleBar = useColorModeValue('light.400', 'dark.800');
-    const buttonColors = useColorModeValue('light.300', 'light.400');
+    // const buttonColors = useColorModeValue('light.300', 'light.400');
     const textColors = useColorModeValue('light.1000', 'dark.100');
-    const button2Colors = useColorModeValue('light.200', 'dark.800');
+    // const button2Colors = useColorModeValue('light.200', 'dark.800');
 
     // const [isLargeDevice] = useMediaQuery('(min-width: 960px)');
 

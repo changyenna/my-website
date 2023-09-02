@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     AiFillPauseCircle,
     AiFillStepForward,
@@ -13,9 +13,7 @@ import {
     useColorModeValue,
     useColorMode,
     Progress,
-    Flex,
-    Spacer,
-    Tooltip
+    Spacer
 } from '@chakra-ui/react';
 
 const Player = ({ theme }) => {
@@ -82,6 +80,20 @@ const Player = ({ theme }) => {
             src: 'https://p.scdn.co/mp3-preview/ba309a7db943a8cc2445d1f744685d1d30bb47ca',
             thumbnail:
                 'https://i.scdn.co/image/ab67616d0000b273241e4fe75732c9c4b49b94c3'
+        },
+        {
+            name: 'ASAP',
+            artist: 'NewJeans',
+            src: 'https://p.scdn.co/mp3-preview/6e580649e577986e9f28e7b7c5e7326577bd9605',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d00001e020744690248ef3ba7b776ea7b'
+        },
+        {
+            name: "Daydreamin'",
+            artist: 'Ariana Grande',
+            src: 'https://p.scdn.co/mp3-preview/93e4be5a95e286a478b678d99e897e86af14c50a',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b273db6ed492fdc27def8f979263'
         }
     ];
 
@@ -97,7 +109,7 @@ const Player = ({ theme }) => {
     const [musicName, setMusicName] = useState('');
     const [thumbnail, setThumbnail] = useState('');
 
-    const seekButtonColors = useColorModeValue('#B3B3B3', '#B3B3B3');
+    // const seekButtonColors = useColorModeValue('#B3B3B3', '#B3B3B3');
     const playButtonColors = useColorModeValue('black', 'white');
     const textColors = useColorModeValue('#000', '#FFF');
 
@@ -323,8 +335,8 @@ const Player = ({ theme }) => {
                             onMouseLeave={handlePlayHover}
                             style={{
                                 transform: playHovered
-                                    ? 'scale(1.1)'
-                                    : 'scale(1)',
+                                    ? 'scale(1)'
+                                    : 'scale(1.1)',
                                 cursor: 'pointer'
                             }}
                         />

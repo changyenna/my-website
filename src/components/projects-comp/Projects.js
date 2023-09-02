@@ -1,9 +1,6 @@
 import React from 'react';
 import {
     Box,
-    Stack,
-    HStack,
-    VStack,
     Grid,
     GridItem,
     Center,
@@ -18,7 +15,7 @@ import {
 // import { pFolder } from '../../assets/pink-folder.png';
 // import soundEffect1 from '../../assets/button_click1.mp3';
 // import soundEffect2 from '../../assets/button_click_2.mp3';
-import { MdWbAuto } from 'react-icons/md';
+// import { MdWbAuto } from 'react-icons/md';
 import Modal1 from './Modal1';
 import Modal2 from './Modal2';
 import Modal3 from './Modal3';
@@ -32,10 +29,10 @@ import Modal5 from './Modal5';
 // };
 
 const Projects = ({ theme }) => {
-    const bgColors = useColorModeValue('light.100', 'dark.300');
-    const titleBar = useColorModeValue('light.400', 'dark.800');
-    const buttonColors = useColorModeValue('light.300', 'light.400');
-    const textColors = useColorModeValue('light.1000', 'dark.100');
+    // const bgColors = useColorModeValue('light.100', 'dark.300');
+    // const titleBar = useColorModeValue('light.400', 'dark.800');
+    // const buttonColors = useColorModeValue('light.300', 'light.400');
+    // const textColors = useColorModeValue('light.1000', 'dark.100');
 
     const {
         isOpen: isOpenModal1,

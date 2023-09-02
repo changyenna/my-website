@@ -16,7 +16,7 @@ import Alert from './pages/landing/Alert';
 import Message from './pages/landing/Message';
 import Home from './pages/home/Home';
 import MyScene from './pages/myscene/MyScene';
-import MusicPlayerWithContext from './components/music-player-comp/MusicPlayer';
+// import MusicPlayerWithContext from './components/music-player-comp/MusicPlayer';
 import { SlidingPanelProvider } from './pages/home/SlidingPanelContext';
 import FirstPanel from './pages/home/FirstPanel';
 import SecondPanel from './pages/home/SecondPanel';
