@@ -2,17 +2,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { Link } from 'react-router-dom';
-import soundEffect1 from '../../assets/button_click_1.mp3';
-
-import LandingPageNavBarCore from '../../nav-bar/LandingPageNavBarCore';
 import { useColorModeValue } from '@chakra-ui/react';
 import MySceneNavBar from '../../nav-bar/MySceneNavBar';
+// import { Link } from 'react-router-dom';
+// import soundEffect1 from '../../assets/button_click_1.mp3';
+// import LandingPageNavBarCore from '../../nav-bar/LandingPageNavBarCore';
 
-const playSoundEffect = (soundEffect) => {
-    const audio = new Audio(soundEffect);
-    audio.play();
-};
+// const playSoundEffect = (soundEffect) => {
+//     const audio = new Audio(soundEffect);
+//     audio.play();
+// };
 
 const useArrowKeyControls = (model) => {
     useEffect(() => {

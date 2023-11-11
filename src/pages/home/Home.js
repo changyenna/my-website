@@ -864,7 +864,7 @@ const Home = () => {
                                         >
                                             <VStack>
                                                 <a
-                                                    href="https://drive.google.com/file/d/1ssmMkihymg_eHK4hwYdHgI_EhGMWEWjo/view?usp=sharing"
+                                                    href="https://docs.google.com/document/d/1yZbLFwnkj3G_vOo46ojVfpv_4eJjNUBoSpNLe3iGX_k/edit?usp=sharing"
                                                     target="_blank"
                                                 >
                                                     <Box>
