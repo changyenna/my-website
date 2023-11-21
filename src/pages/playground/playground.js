@@ -20,7 +20,7 @@ const Playground = () => {
                     <GridItem
                         w="100%"
                         h="100"
-                        // bg="blue.500"
+                        bg="blue.500"
                         display="flex"
                         justifyContent="center"
                         alignItems="center"
