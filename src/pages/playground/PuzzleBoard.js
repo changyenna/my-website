@@ -295,7 +295,7 @@ const PuzzleBoard = () => {
     // };
 
     return (
-        <Box bgColor="pink.700" width="300px" p={5}>
+        <Box bgColor="pink.700" width="300px" p={5} borderRadius="md">
             <Grid templateColumns="repeat(3, 1fr)" gap={2} p={4}>
                 {board.map((row, rowIndex) =>
                     row.map((tile, colIndex) => (
@@ -318,24 +318,24 @@ const PuzzleBoard = () => {
                 )}
             </Grid>
             <HStack>
-                <Text mt={4} ml={4} fontWeight="bold">
+                <Text mt={0} ml={4} fontWeight="bold">
                     Moves: {count}
                 </Text>
                 {isBoardSolved() && (
-                    <Text mt={4} ml={4} color="green.500" fontWeight="bold">
+                    <Text mt={0} ml={4} color="green.500" fontWeight="bold">
                         {isFirstMount ? '' : 'Solved!'}
                     </Text>
                 )}
             </HStack>
             <HStack>
-                <Button mt={4} ml={4} onClick={shuffleBoard}>
+                <Button mt={10} ml={4} onClick={shuffleBoard}>
                     {isFirstMount
                         ? 'Play'
                         : isBoardSolved()
                         ? 'Play Again'
                         : 'Shuffle'}
                 </Button>
-                <Text mt={4} ml={4} fontWeight="bold">
+                <Text mt={10} ml={4} fontWeight="bold">
                     Min Moves: {minMoves}
                 </Text>
             </HStack>
