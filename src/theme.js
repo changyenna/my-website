@@ -1,7 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
-const bgGrid = `linear-gradient(180deg, white 2px, transparent 1px), linear-gradient(90deg, white 2px, transparent 1px), #F4D2E9`;
+const bg = `linear-gradient(180deg, white 2px, transparent 1px), linear-gradient(90deg, white 2px, transparent 1px), #F4D2E9`;
 // const bgGradient = `linear-gradient(to bottom, #6C6191, #EDA7C5, #FFFFFF)`;
 // const bgGradient = `linear-gradient(to bottom, #250B3E, #7D529A, #F48BA9)`;
 // const bgGradient = `linear-gradient(to bottom, #1A0C26, #7E519C, #F48BA9)`;
@@ -31,7 +31,7 @@ const breakpointsBackgroundSize = {
 const styles = {
     global: (props) => ({
         body: {
-            bg: props.colorMode === 'light' ? bgGrid : bgGradient,
+            bg: props.colorMode === 'light' ? bg : bgGradient,
             backgroundSize:
                 props.colorMode === 'light'
                     ? '60px 60px'

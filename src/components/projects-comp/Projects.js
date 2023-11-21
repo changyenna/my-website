@@ -21,6 +21,7 @@ import Modal2 from './Modal2';
 import Modal3 from './Modal3';
 import Modal4 from './Modal4';
 import Modal5 from './Modal5';
+import Modal6 from './Modal6';
 // import Footer from '../footer/Footer';
 
 // const playSoundEffect = (soundEffect) => {
@@ -62,6 +63,12 @@ const Projects = ({ theme }) => {
         isOpen: isOpenModal5,
         onOpen: onOpenModal5,
         onClose: onCloseModal5
+    } = useDisclosure();
+
+    const {
+        isOpen: isOpenModal6,
+        onOpen: onOpenModal6,
+        onClose: onCloseModal6
     } = useDisclosure();
 
     return (
@@ -119,6 +126,15 @@ const Projects = ({ theme }) => {
                             isOpen={isOpenModal4}
                             onOpen={onOpenModal4}
                             onClose={onCloseModal4}
+                        />
+                    </Center>
+                </GridItem>
+                <GridItem colSpan={2} h="10" bg="transparent">
+                    <Center>
+                        <Modal6
+                            isOpen={isOpenModal6}
+                            onOpen={onOpenModal6}
+                            onClose={onCloseModal6}
                         />
                     </Center>
                 </GridItem>

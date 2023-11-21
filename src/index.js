@@ -17,6 +17,7 @@ import Message from './pages/landing/Message';
 import Home from './pages/home/Home';
 import MyScene from './pages/myscene/MyScene';
 // import MusicPlayerWithContext from './components/music-player-comp/MusicPlayer';
+import Playground from './pages/playground/playground';
 import { SlidingPanelProvider } from './pages/home/SlidingPanelContext';
 import FirstPanel from './pages/home/FirstPanel';
 import SecondPanel from './pages/home/SecondPanel';
@@ -34,6 +35,7 @@ root.render(
                         <Route path="/message" element={<Message />} />
                         <Route path="/home" element={<Home />} />
                         <Route path="/myScene" element={<MyScene />} />
+                        <Route path="/playground" element={<Playground />} />
                         <Route path="/firstPanel" element={<FirstPanel />} />
                         <Route path="/secondPanel" element={<SecondPanel />} />
                     </Routes>
