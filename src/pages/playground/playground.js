@@ -20,7 +20,6 @@ const Playground = () => {
             <Container
                 maxW="container.xl"
                 justifyContent="center"
-                marginTop="100px"
                 height="auto"
             >
                 <Grid
@@ -31,17 +30,17 @@ const Playground = () => {
                     <GridItem
                         w="100%"
                         h="100%"
-                        // bgColor="blue.100"
+                        bgColor="blue.800"
                         display="flex"
-                        justifyContent="center"
-                        alignItems="center"
+                        justifyContent="left"
+                        alignItems="flex-start"
                     >
                         <EightPuzzle />
                     </GridItem>
                     <GridItem
                         w="100%"
                         h="100"
-                        // bgColor="blue.100"
+                        bgColor="blue.800"
                         display="flex"
                         justifyContent="center"
                         alignItems="center"
