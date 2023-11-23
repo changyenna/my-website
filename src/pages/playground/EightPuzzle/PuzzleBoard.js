@@ -1,28 +1,16 @@
 import React, { useState } from 'react';
-import { Box, Grid, GridItem, Text, Button, HStack } from '@chakra-ui/react';
+import {
+    Box,
+    Grid,
+    GridItem,
+    Text,
+    Button,
+    HStack,
+    useColorModeValue
+} from '@chakra-ui/react';
 import solvePuzzle from './puzzleSolver';
-
-const MatrixDisplay = ({ matrix }) => (
-    <Grid templateColumns={`repeat(${matrix[0].length}, 1fr)`} gap={1}>
-        {matrix.map((row, rowIndex) =>
-            row.map((tile, colIndex) => (
-                <GridItem
-                    key={colIndex}
-                    colSpan={1}
-                    bg={tile === 0 ? 'pink.200' : 'white'}
-                    borderWidth="0px"
-                    borderRadius="md"
-                    p={0}
-                    textAlign="center"
-                >
-                    <Text fontSize="sm" fontWeight="normal" color="black">
-                        {tile !== 0 && tile}
-                    </Text>
-                </GridItem>
-            ))
-        )}
-    </Grid>
-);
+import puzzleConfigurations from './puzzleConfigurations';
+import AnswerKey from './AnswerKey';
 
 const PuzzleBoard = () => {
     const initialBoard = [
@@ -43,47 +31,28 @@ const PuzzleBoard = () => {
         setMinMoves(solutionPath.length > 0 ? solutionPath.length - 1 : 0);
     };
 
+    let previousBoard = null;
+
     const shuffleBoard = () => {
         setIsFirstMount(false);
 
-        const puzzleConfigurations = [
-            // [
-            //     [1, 2, 0], //2 moves
-            //     [4, 5, 3],
-            //     [7, 8, 6]
-            // ]
-            // [
-            //     [1, 0, 3], //3 moves
-            //     [4, 2, 5],
-            //     [7, 8, 6]
-            // ]
-            [
-                [0, 1, 3], //4 moves
-                [4, 2, 5],
-                [7, 8, 6]
-            ]
-            // [
-            //     [1, 2, 3], //6 moves
-            //     [4, 0, 8],
-            //     [7, 6, 5]
-            // ]
-            // [
-            //     [1, 0, 2], //9 moves
-            //     [7, 4, 3],
-            //     [8, 6, 5]
-            // ]
-        ];
+        let selectedBoard = null;
+        do {
+            selectedBoard =
+                puzzleConfigurations[
+                    Math.floor(Math.random() * puzzleConfigurations.length)
+                ];
+        } while (
+            JSON.stringify(selectedBoard) === JSON.stringify(previousBoard)
+        );
 
-        const selectedBoard =
-            puzzleConfigurations[
-                Math.floor(Math.random() * puzzleConfigurations.length)
-            ];
-
-        console.log('Selected Board:', selectedBoard);
+        // console.log('Selected Board:', selectedBoard);
 
         setBoard(selectedBoard);
         solvePuzzleHelper(selectedBoard);
         setCount(0);
+
+        previousBoard = selectedBoard;
     };
 
     const findBlankPosition = () => {
@@ -129,21 +98,28 @@ const PuzzleBoard = () => {
         return JSON.stringify(board) === JSON.stringify(initialBoard);
     };
 
+    const [scrollBehavior, setScrollBehavior] = React.useState('inside');
+    const [showAnswer, setShowAnswer] = React.useState(false);
+    const textColors = useColorModeValue('light.1000', 'dark.100');
+    const bgColors = useColorModeValue('light.100', 'dark.300');
+    const buttonColors = useColorModeValue('light.300', 'light.400');
+    const titleBar = useColorModeValue('light.400', 'dark.800');
+
     return (
         <>
-            <HStack
+            <Box
                 display="flex"
-                justifyContent="left"
-                alignItems="flex-start"
+                flexDirection={{ base: 'column', md: 'row' }}
+                gap={1}
             >
-                <Box bgColor="pink.700" width="300px" p={5} borderRadius="md">
-                    <Grid templateColumns="repeat(3, 1fr)" gap={2} p={4}>
+                <Box bgColor={titleBar} width="300px" p={8} borderRadius="md">
+                    <Grid templateColumns="repeat(3, 1fr)" gap={2} p={0}>
                         {board.map((row, rowIndex) =>
                             row.map((tile, colIndex) => (
                                 <GridItem
                                     key={colIndex}
                                     colSpan={1}
-                                    bg={tile === 0 ? 'pink.200' : 'white'}
+                                    bg={tile === 0 ? 'yellow.100' : 'white'}
                                     borderWidth="1px"
                                     borderRadius="md"
                                     p={4}
@@ -164,46 +140,58 @@ const PuzzleBoard = () => {
                             ))
                         )}
                     </Grid>
-                    <HStack>
-                        <Text mt={0} ml={4} fontWeight="bold">
+                    <HStack
+                        display="flex"
+                        justifyContent="space-between"
+                        mt={7}
+                    >
+                        <Text mt={0} fontWeight="bold">
                             Moves: {count}
                         </Text>
-                        {isBoardSolved() && (
-                            <Text
-                                mt={0}
-                                ml={4}
-                                color="green.500"
-                                fontWeight="bold"
-                            >
-                                {isFirstMount ? '' : 'Solved!'}
-                            </Text>
-                        )}
+                        <Text mt={0} fontWeight="bold">
+                            Min Moves: {minMoves}
+                        </Text>
                     </HStack>
-                    <HStack>
-                        <Button mt={10} ml={4} onClick={shuffleBoard}>
+                    <HStack
+                        display="flex"
+                        justifyContent="space-between"
+                        mt={7}
+                    >
+                        <Button mt={0} onClick={shuffleBoard}>
                             {isFirstMount
                                 ? 'Play'
                                 : isBoardSolved()
                                 ? 'Play Again'
                                 : 'Shuffle'}
                         </Button>
-                        <Text mt={10} ml={4} fontWeight="bold">
-                            Min Moves: {minMoves}
-                        </Text>
+                        {isBoardSolved() && (
+                            <Text
+                                mt={0}
+                                ml={4}
+                                color="green.300"
+                                fontWeight="bold"
+                            >
+                                {isFirstMount ? '' : 'Solved!'}
+                            </Text>
+                        )}
                     </HStack>
                 </Box>
-                <Box mt={4} p={5}>
-                    <Text fontWeight="bold">Answer:</Text>
-                    {path.map((step, index) => (
-                        <div key={index}>
-                            <Text fontWeight="bold" mt={4}>
-                                Step {index + 1}:
-                            </Text>
-                            <MatrixDisplay matrix={step.board} />
-                        </div>
-                    ))}
+                <Box
+                    bgColor={titleBar}
+                    width="300px"
+                    height="400px"
+                    p={5}
+                    borderRadius="md"
+                    overflow={scrollBehavior === 'inside' ? 'auto' : 'hidden'}
+                >
+                    <AnswerKey
+                        scrollBehavior={scrollBehavior}
+                        showAnswer={showAnswer}
+                        setShowAnswer={setShowAnswer}
+                        path={path}
+                    />
                 </Box>
-            </HStack>
+            </Box>
         </>
     );
 };

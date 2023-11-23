@@ -5,7 +5,7 @@ import {
     Container,
     useBreakpointValue
 } from '@chakra-ui/react';
-import EightPuzzle from './EightPuzzle';
+import PuzzleBoard from './EightPuzzle/PuzzleBoard';
 import MySceneNavBar from '../../nav-bar/MySceneNavBar';
 
 const Playground = () => {
@@ -19,8 +19,10 @@ const Playground = () => {
             <MySceneNavBar display_return={true} />
             <Container
                 maxW="container.xl"
+                display="flex"
                 justifyContent="center"
                 height="auto"
+                marginBottom={100}
             >
                 <Grid
                     templateColumns={gridColumnTemplate}
@@ -30,21 +32,23 @@ const Playground = () => {
                     <GridItem
                         w="100%"
                         h="100%"
-                        bgColor="blue.800"
+                        // bgColor="red.100"
                         display="flex"
                         justifyContent="left"
                         alignItems="flex-start"
                     >
-                        <EightPuzzle />
+                        <PuzzleBoard />
                     </GridItem>
                     <GridItem
                         w="100%"
-                        h="100"
-                        bgColor="blue.800"
+                        h="100%"
+                        bgColor="blue.300"
                         display="flex"
                         justifyContent="center"
                         alignItems="center"
-                    ></GridItem>
+                    >
+                        coming soon
+                    </GridItem>
                 </Grid>
             </Container>
         </div>
