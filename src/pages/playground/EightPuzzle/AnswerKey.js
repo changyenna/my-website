@@ -1,5 +1,21 @@
 import React from 'react';
-import { Box, Text, Grid, GridItem } from '@chakra-ui/react';
+import {
+    Box,
+    Text,
+    Grid,
+    GridItem,
+    HStack,
+    Button,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverHeader,
+    PopoverBody,
+    PopoverArrow,
+    PopoverCloseButton,
+    Portal
+} from '@chakra-ui/react';
+import { CiCircleInfo } from 'react-icons/ci';
 
 const MatrixDisplay = ({ matrix }) => (
     <Grid
@@ -35,13 +51,51 @@ const AnswerKey = ({ scrollBehavior, showAnswer, setShowAnswer, path }) => {
         >
             {scrollBehavior === 'inside' && (
                 <>
-                    <Text
-                        fontWeight="bold"
-                        onClick={() => setShowAnswer(!showAnswer)}
-                        cursor="pointer"
-                    >
-                        {showAnswer ? 'Hide Answer: ' : 'Show Answer: '}
-                    </Text>
+                    <HStack display="flex" justifyContent="space-between">
+                        <Text
+                            fontWeight="bold"
+                            onClick={() => setShowAnswer(!showAnswer)}
+                            cursor="pointer"
+                        >
+                            {showAnswer ? 'Hide Answer: ' : 'Show Answer: '}
+                        </Text>
+                        <Popover placement="bottom">
+                            <PopoverTrigger>
+                                <Box>
+                                    <CiCircleInfo />
+                                </Box>
+                            </PopoverTrigger>
+                            <Portal>
+                                <PopoverContent>
+                                    <PopoverArrow />
+                                    <PopoverHeader>
+                                        Algorithmic Insight: A* Search
+                                    </PopoverHeader>
+                                    <PopoverCloseButton />
+                                    <PopoverBody>
+                                        To solve the 8-puzzle and discover the
+                                        most optimal path to the goal state, we
+                                        employ the A* search algorithm. This
+                                        algorithm assesses various moves by
+                                        calculating the number of misplaced
+                                        tiles along each potential path,
+                                        utilizing a priority queue and a
+                                        heuristic function.
+                                        <br />
+                                        <br />
+                                        A* search is a widely used algorithm in
+                                        artificial intelligence and robotics for
+                                        pathfinding and graph traversal. Solving
+                                        the 8 puzzle with A* helps us to
+                                        understand the algorithmic principles of
+                                        heuristic search, exploring states
+                                        efficiently to find the optimal
+                                        solution.
+                                    </PopoverBody>
+                                </PopoverContent>
+                            </Portal>
+                        </Popover>
+                    </HStack>
                     {showAnswer && (
                         <>
                             {path.slice(1).map((step, index) => (
