@@ -5,10 +5,10 @@ import {
     Grid,
     GridItem,
     HStack,
-    Button,
     Popover,
     PopoverTrigger,
     PopoverContent,
+    PopoverFooter,
     PopoverHeader,
     PopoverBody,
     PopoverArrow,
@@ -43,7 +43,13 @@ const MatrixDisplay = ({ matrix }) => (
     </Grid>
 );
 
-const AnswerKey = ({ scrollBehavior, showAnswer, setShowAnswer, path }) => {
+const AnswerKey = ({
+    scrollBehavior,
+    showAnswer,
+    setShowAnswer,
+    path,
+    shufflePressed
+}) => {
     return (
         <Box
             // width="100%"
@@ -57,11 +63,15 @@ const AnswerKey = ({ scrollBehavior, showAnswer, setShowAnswer, path }) => {
                             onClick={() => setShowAnswer(!showAnswer)}
                             cursor="pointer"
                         >
-                            {showAnswer ? 'Hide Answer: ' : 'Show Answer: '}
+                            {!shufflePressed
+                                ? null
+                                : showAnswer
+                                ? 'Hide Answer: '
+                                : 'Show Answer: '}
                         </Text>
                         <Popover placement="bottom">
                             <PopoverTrigger>
-                                <Box>
+                                <Box cursor="pointer">
                                     <CiCircleInfo />
                                 </Box>
                             </PopoverTrigger>
@@ -76,11 +86,9 @@ const AnswerKey = ({ scrollBehavior, showAnswer, setShowAnswer, path }) => {
                                         To solve the 8-puzzle and discover the
                                         most optimal path to the goal state, we
                                         employ the A* search algorithm. This
-                                        algorithm assesses various moves by
+                                        algorithm assesses potential moves by
                                         calculating the number of misplaced
-                                        tiles along each potential path,
-                                        utilizing a priority queue and a
-                                        heuristic function.
+                                        tiles along each potential path.
                                         <br />
                                         <br />
                                         A* search is a widely used algorithm in
@@ -92,6 +100,11 @@ const AnswerKey = ({ scrollBehavior, showAnswer, setShowAnswer, path }) => {
                                         efficiently to find the optimal
                                         solution.
                                     </PopoverBody>
+                                    <PopoverFooter>
+                                        Topics: Array, Breadth-First Search
+                                        (BFS), Matrix, Priority Queue, Heuristic
+                                        Functions
+                                    </PopoverFooter>
                                 </PopoverContent>
                             </Portal>
                         </Popover>

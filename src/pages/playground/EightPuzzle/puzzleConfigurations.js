@@ -1,10 +1,5 @@
 const puzzleConfigurations = [
     [
-        [1, 2, 0], //2 moves
-        [4, 5, 3],
-        [7, 8, 6]
-    ],
-    [
         [1, 0, 3], //3 moves
         [4, 2, 5],
         [7, 8, 6]

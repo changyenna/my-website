@@ -245,11 +245,11 @@ const solvePuzzle = (newBoard) => {
 
         iterations++;
         if (iterations === maxIterations) {
-            console.log('Max Iterations reached.');
+            // console.log('Max Iterations reached.');
         }
     }
 
-    console.log('No solution found within the maximum iterations.');
+    // console.log('No solution found within the maximum iterations.');
     return [];
 };
 

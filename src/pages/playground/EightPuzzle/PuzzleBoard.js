@@ -35,6 +35,7 @@ const PuzzleBoard = () => {
 
     const shuffleBoard = () => {
         setIsFirstMount(false);
+        setShufflePressed(true);
 
         let selectedBoard = null;
         do {
@@ -100,6 +101,8 @@ const PuzzleBoard = () => {
 
     const [scrollBehavior, setScrollBehavior] = React.useState('inside');
     const [showAnswer, setShowAnswer] = React.useState(false);
+    const [shufflePressed, setShufflePressed] = useState(false);
+
     const textColors = useColorModeValue('light.1000', 'dark.100');
     const bgColors = useColorModeValue('light.100', 'dark.300');
     const buttonColors = useColorModeValue('light.300', 'light.400');
@@ -189,6 +192,7 @@ const PuzzleBoard = () => {
                         showAnswer={showAnswer}
                         setShowAnswer={setShowAnswer}
                         path={path}
+                        shufflePressed={shufflePressed}
                     />
                 </Box>
             </Box>
