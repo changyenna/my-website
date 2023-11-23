@@ -15,8 +15,8 @@ import {
     WrapItem,
     Tag
 } from '@chakra-ui/react';
-import IMG from '../../assets/tooth.png';
-import FOLDER from '../../assets/bluef.png';
+import IMG from '../../assets/data_struct.png';
+import FOLDER from '../../assets/greenf.png';
 import { Link } from 'react-router-dom';
 // import { PiFolderFill } from 'react-icons/pi';
 // import soundEffect1 from '../assets/button_click_1.mp3';
@@ -120,15 +120,18 @@ const Modal6 = ({ isOpen, onClose, onOpen }) => {
                                     }}
                                     color={textColors}
                                 >
-                                    <VStack>
-                                        <Text fontSize="md" fontWeight="bold">
-                                            hello?
-                                        </Text>
-                                        <Text fontSize="md">
-                                            July - August 2023
-                                        </Text>
-                                    </VStack>
+                                    <Text fontSize="md">
+                                        This is a page within my website
+                                        dedicated to continuous learning and
+                                        mastery in essential areas of computer
+                                        science. Explore mini-components
+                                        showcasing my understanding of critical
+                                        domains: data structures, algorithms,
+                                        programming fundamentals, and
+                                        Object-Oriented Programming (OOP).
+                                    </Text>
                                 </div>
+
                                 <Box
                                     // bg="red"
                                     margin="10px auto 0px"
@@ -142,37 +145,7 @@ const Modal6 = ({ isOpen, onClose, onOpen }) => {
                                                 color={textColors}
                                                 bg={titleBar}
                                             >
-                                                Next.js
-                                            </Tag>
-                                        </WrapItem>
-
-                                        <WrapItem>
-                                            <Tag
-                                                variant="solid"
-                                                color={textColors}
-                                                bg={titleBar}
-                                            >
-                                                Typescript
-                                            </Tag>
-                                        </WrapItem>
-                                        <WrapItem>
-                                            <Tag
-                                                v
-                                                variant="solid"
-                                                color={textColors}
-                                                bg={titleBar}
-                                            >
-                                                MaterialUI
-                                            </Tag>
-                                        </WrapItem>
-                                        <WrapItem>
-                                            <Tag
-                                                v
-                                                variant="solid"
-                                                color={textColors}
-                                                bg={titleBar}
-                                            >
-                                                AWS Amplify
+                                                Data Strucutres
                                             </Tag>
                                         </WrapItem>
                                         <WrapItem>
@@ -182,7 +155,7 @@ const Modal6 = ({ isOpen, onClose, onOpen }) => {
                                                 color={textColors}
                                                 bg={titleBar}
                                             >
-                                                Lambda
+                                                Algorithms
                                             </Tag>
                                         </WrapItem>
                                         <WrapItem>
@@ -192,7 +165,7 @@ const Modal6 = ({ isOpen, onClose, onOpen }) => {
                                                 color={textColors}
                                                 bg={titleBar}
                                             >
-                                                DynamoDB
+                                                React.js
                                             </Tag>
                                         </WrapItem>
                                         <WrapItem>
@@ -202,7 +175,7 @@ const Modal6 = ({ isOpen, onClose, onOpen }) => {
                                                 color={textColors}
                                                 bg={titleBar}
                                             >
-                                                SEO
+                                                Javascript
                                             </Tag>
                                         </WrapItem>
                                     </Wrap>

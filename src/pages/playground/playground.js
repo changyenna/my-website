@@ -47,7 +47,7 @@ const Playground = () => {
                         justifyContent="center"
                         alignItems="center"
                     >
-                        coming soon
+                        under construction
                     </GridItem>
                 </Grid>
             </Container>

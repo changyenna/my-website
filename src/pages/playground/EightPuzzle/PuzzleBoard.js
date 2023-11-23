@@ -112,7 +112,7 @@ const PuzzleBoard = () => {
                 flexDirection={{ base: 'column', md: 'row' }}
                 gap={1}
             >
-                <Box bgColor={titleBar} width="300px" p={8} borderRadius="md">
+                <Box bgColor={titleBar} width="350px" p={8} borderRadius="md">
                     <Grid templateColumns="repeat(3, 1fr)" gap={2} p={0}>
                         {board.map((row, rowIndex) =>
                             row.map((tile, colIndex) => (
@@ -178,7 +178,7 @@ const PuzzleBoard = () => {
                 </Box>
                 <Box
                     bgColor={titleBar}
-                    width="300px"
+                    width="350px"
                     height="400px"
                     p={5}
                     borderRadius="md"
