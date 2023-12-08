@@ -1,11 +1,17 @@
-// SlidingPanelContext.js
-
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const SlidingPanelContext = createContext();
 
 export const SlidingPanelProvider = ({ children }) => {
     const [showPanel, setShowPanel] = useState(false);
+
+    useEffect(() => {
+        document.body.style.overflowX = 'hidden';
+
+        return () => {
+            document.body.style.overflowX = 'auto';
+        };
+    }, [showPanel]);
 
     const togglePanel = () => {
         setShowPanel((prevShowPanel) => !prevShowPanel);

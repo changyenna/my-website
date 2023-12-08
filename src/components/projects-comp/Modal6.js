@@ -198,7 +198,7 @@ const Modal6 = ({ isOpen, onClose, onOpen }) => {
                                     fontWeight="normal"
                                     bg={buttonColors}
                                 >
-                                    <Link to="/playground">explore</Link>
+                                    <Link to="/playground">Explore</Link>
                                 </Button>
                             </ModalFooter>
                         </VStack>

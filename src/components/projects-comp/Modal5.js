@@ -19,6 +19,7 @@ import {
 // import soundEffect1 from '../assets/button_click_1.mp3';
 import IMG from '../../assets/tooth.png';
 import FOLDER from '../../assets/bluef.png';
+import GIF from '../../assets/smile_creator_recording.gif';
 
 // const playSoundEffect = (soundEffect) => {
 //     const audio = new Audio(soundEffect);
@@ -59,6 +60,7 @@ const Modal5 = ({ isOpen, onClose, onOpen }) => {
                     </Text>
                     {/* <Badge>Completed</Badge> */}
                 </VStack>
+
                 <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
                     <ModalContent
@@ -122,12 +124,15 @@ const Modal5 = ({ isOpen, onClose, onOpen }) => {
                                 >
                                     <VStack>
                                         <Text fontSize="md" fontWeight="bold">
-                                            Website Redesign for Smile Creator
-                                            Family Dentistry
+                                            Smile Creator Family Dentistry
+                                            Website
                                         </Text>
-                                        <Text fontSize="md">
+                                        <Box>
+                                            <img src={GIF} />
+                                        </Box>
+                                        {/* <Text fontSize="md">
                                             July - August 2023
-                                        </Text>
+                                        </Text> */}
                                     </VStack>
                                 </div>
                                 <Box
@@ -212,7 +217,7 @@ const Modal5 = ({ isOpen, onClose, onOpen }) => {
                             <ModalFooter>
                                 <Button
                                     as="a"
-                                    href="https://www.smilecreatorperris.com/"
+                                    href="https://www.smilecreatordental.com/"
                                     target="_blank"
                                     // onClick={() =>
                                     //     playSoundEffect(soundEffect1)
@@ -229,7 +234,7 @@ const Modal5 = ({ isOpen, onClose, onOpen }) => {
                                     fontWeight="normal"
                                     bg={buttonColors}
                                 >
-                                    website
+                                    Visit website
                                 </Button>
                             </ModalFooter>
                         </VStack>

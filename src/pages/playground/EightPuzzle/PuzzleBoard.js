@@ -86,6 +86,10 @@ const PuzzleBoard = () => {
         }
     };
 
+    const resetBoard = (selectedBoard) => {
+        setBoard(selectedBoard);
+    };
+
     const isAdjacentToBlank = (row, col, blankPosition) => {
         return (
             (row === blankPosition.row &&
@@ -167,6 +171,12 @@ const PuzzleBoard = () => {
                                 ? 'Play Again'
                                 : 'Shuffle'}
                         </Button>
+                        {/* {shufflePressed ? (
+                            <Button onClick={() => resetBoard(previousBoard)}>
+                                Reset
+                            </Button>
+                        ) : null} */}
+
                         {isBoardSolved() && (
                             <Text
                                 mt={0}

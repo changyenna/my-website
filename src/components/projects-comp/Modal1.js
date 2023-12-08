@@ -192,7 +192,7 @@ const Modal1 = ({ isOpen, onClose, onOpen }) => {
                                     fontWeight="normal"
                                     bg={buttonColors}
                                 >
-                                    <Link to="/myScene">explore</Link>
+                                    <Link to="/myScene">Explore</Link>
                                 </Button>
                             </ModalFooter>
                         </VStack>

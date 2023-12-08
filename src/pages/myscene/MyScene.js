@@ -2,8 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { useColorModeValue } from '@chakra-ui/react';
+import { useColorModeValue, Flex, Button } from '@chakra-ui/react';
 import MySceneNavBar from '../../nav-bar/MySceneNavBar';
+import {
+    FaCaretLeft,
+    FaCaretDown,
+    FaCaretRight,
+    FaCaretUp
+} from 'react-icons/fa';
 // import { Link } from 'react-router-dom';
 // import soundEffect1 from '../../assets/button_click_1.mp3';
 // import LandingPageNavBarCore from '../../nav-bar/LandingPageNavBarCore';
@@ -224,6 +230,22 @@ const MyScene = () => {
         };
     }, []);
 
+    const handleVirtualKeyDown = (direction) => {
+        // Simulate keydown event for the specified direction
+        const keyEvent = new KeyboardEvent('keydown', {
+            key: `Arrow${direction}`
+        });
+        window.dispatchEvent(keyEvent);
+    };
+
+    const handleVirtualKeyUp = (direction) => {
+        // Simulate keyup event for the specified direction
+        const keyEvent = new KeyboardEvent('keyup', {
+            key: `Arrow${direction}`
+        });
+        window.dispatchEvent(keyEvent);
+    };
+
     return (
         <div jstyle={{ background: '#CDFEFB', height: '100vh' }}>
             <MySceneNavBar display_return={true} />
@@ -237,6 +259,66 @@ const MyScene = () => {
                 }}
             >
                 Please use arrow keys to move banana cat
+                <Flex
+                    justify="center"
+                    alignItems="flex-end"
+                    position="absolute"
+                    top="60%"
+                    left="80%"
+                    transform="translate(-50%, -50%)"
+                    zIndex="1"
+                >
+                    <Button
+                        variant="outline"
+                        width={50}
+                        height={50}
+                        mr="2"
+                        onMouseDown={() => handleVirtualKeyDown('Left')}
+                        onMouseUp={() => handleVirtualKeyUp('Left')}
+                        onTouchStart={() => handleVirtualKeyDown('Left')}
+                        onTouchEnd={() => handleVirtualKeyUp('Left')}
+                    >
+                        <FaCaretLeft />
+                    </Button>
+                    <Flex direction="column">
+                        <Button
+                            variant="outline"
+                            width={50}
+                            height={50}
+                            onMouseDown={() => handleVirtualKeyDown('Up')}
+                            onMouseUp={() => handleVirtualKeyUp('Up')}
+                            onTouchStart={() => handleVirtualKeyDown('Up')}
+                            onTouchEnd={() => handleVirtualKeyUp('Up')}
+                        >
+                            <FaCaretUp />
+                        </Button>
+
+                        <Button
+                            variant="outline"
+                            width={50}
+                            height={50}
+                            mt="2"
+                            onMouseDown={() => handleVirtualKeyDown('Down')}
+                            onMouseUp={() => handleVirtualKeyUp('Down')}
+                            onTouchStart={() => handleVirtualKeyDown('Down')}
+                            onTouchEnd={() => handleVirtualKeyUp('Down')}
+                        >
+                            <FaCaretDown />
+                        </Button>
+                    </Flex>
+                    <Button
+                        variant="outline"
+                        width={50}
+                        height={50}
+                        ml="2"
+                        onMouseDown={() => handleVirtualKeyDown('Right')}
+                        onMouseUp={() => handleVirtualKeyUp('Right')}
+                        onTouchStart={() => handleVirtualKeyDown('Right')}
+                        onTouchEnd={() => handleVirtualKeyUp('Right')}
+                    >
+                        <FaCaretRight />
+                    </Button>
+                </Flex>
             </div>
             <div ref={sceneRef} />
 

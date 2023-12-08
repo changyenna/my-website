@@ -51,77 +51,80 @@ const AnswerKey = ({
     shufflePressed
 }) => {
     return (
-        <Box
-            // width="100%"
-            overflow={scrollBehavior === 'inside' ? 'auto' : 'hidden'}
-        >
-            {scrollBehavior === 'inside' && (
-                <>
-                    <HStack display="flex" justifyContent="space-between">
-                        <Text
-                            fontWeight="bold"
-                            onClick={() => setShowAnswer(!showAnswer)}
-                            cursor="pointer"
-                        >
-                            {!shufflePressed
-                                ? null
-                                : showAnswer
-                                ? 'Hide Answer: '
-                                : 'Show Answer: '}
-                        </Text>
-                        <Popover placement="bottom">
-                            <PopoverTrigger>
-                                <Box cursor="pointer">
-                                    <CiCircleInfo />
-                                </Box>
-                            </PopoverTrigger>
-                            <Portal>
-                                <PopoverContent>
-                                    <PopoverArrow />
-                                    <PopoverHeader>
-                                        Algorithmic Insight: A* Search
-                                    </PopoverHeader>
-                                    <PopoverCloseButton />
-                                    <PopoverBody>
-                                        To solve the 8-puzzle and discover the
-                                        most optimal path to the goal state, we
-                                        employ the A* search algorithm. This
-                                        algorithm assesses potential moves by
-                                        calculating the number of misplaced
-                                        tiles along each potential path.
-                                        <br />
-                                        <br />
-                                        A* search is a widely used algorithm in
-                                        artificial intelligence and robotics for
-                                        pathfinding and graph traversal. Solving
-                                        the 8 puzzle with A* helps us to
-                                        understand the algorithmic principles of
-                                        heuristic search, exploring states
-                                        efficiently to find the optimal
-                                        solution.
-                                    </PopoverBody>
-                                    <PopoverFooter>
-                                        Topics: Array, Breadth-First Search
-                                        (BFS), Matrix, Priority Queue, Heuristic
-                                        Functions
-                                    </PopoverFooter>
-                                </PopoverContent>
-                            </Portal>
-                        </Popover>
-                    </HStack>
-                    {showAnswer && (
-                        <>
-                            {path.slice(1).map((step, index) => (
-                                <div key={index + 1}>
-                                    <Text mt={4}>Step {index + 1}:</Text>
-                                    <MatrixDisplay matrix={step} />
-                                </div>
-                            ))}
-                        </>
-                    )}
-                </>
-            )}
-        </Box>
+        <>
+            <HStack
+                display="flex"
+                justifyContent="space-between"
+                // bgColor="red.200"
+            >
+                <Text
+                    fontWeight="bold"
+                    onClick={() => setShowAnswer(!showAnswer)}
+                    cursor="pointer"
+                >
+                    {!shufflePressed
+                        ? null
+                        : showAnswer
+                        ? 'Hide Answer: '
+                        : 'Show Answer: '}
+                </Text>
+                <Popover placement="bottom">
+                    <PopoverTrigger>
+                        <Box cursor="pointer">
+                            <CiCircleInfo />
+                        </Box>
+                    </PopoverTrigger>
+                    <Portal>
+                        <PopoverContent>
+                            <PopoverArrow />
+                            <PopoverHeader>
+                                Algorithmic Insight: A* Search
+                            </PopoverHeader>
+                            <PopoverCloseButton />
+                            <PopoverBody>
+                                To solve the 8-puzzle and discover the most
+                                optimal path to the goal state, I employed the
+                                A* search algorithm. This algorithm assesses
+                                potential moves by calculating the number of
+                                misplaced tiles along each potential path.
+                                <br />
+                                <br />
+                                A* search is a widely used algorithm in
+                                artificial intelligence and robotics for
+                                pathfinding and graph traversal. Solving the 8
+                                puzzle with A* helps us to understand the
+                                algorithmic principles of heuristic search,
+                                exploring states efficiently to find the optimal
+                                solution.
+                            </PopoverBody>
+                            <PopoverFooter>
+                                Topics: Array, Breadth-First Search (BFS),
+                                Matrix, Priority Queue, Heuristic Functions
+                            </PopoverFooter>
+                        </PopoverContent>
+                    </Portal>
+                </Popover>
+            </HStack>
+            <Box
+                // bgColor="red.500"
+                overflow={scrollBehavior === 'inside' ? 'auto' : 'hidden'}
+            >
+                {scrollBehavior === 'inside' && (
+                    <>
+                        {showAnswer && (
+                            <>
+                                {path.slice(1).map((step, index) => (
+                                    <div key={index + 1}>
+                                        <Text mt={4}>Step {index + 1}:</Text>
+                                        <MatrixDisplay matrix={step} />
+                                    </div>
+                                ))}
+                            </>
+                        )}
+                    </>
+                )}
+            </Box>
+        </>
     );
 };
 

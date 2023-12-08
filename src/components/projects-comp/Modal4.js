@@ -212,7 +212,7 @@ const Modal4 = ({ isOpen, onClose, onOpen }) => {
                                     fontWeight="normal"
                                     bg={buttonColors}
                                 >
-                                    explore
+                                    Explore
                                 </Button>
                             </ModalFooter>
                         </VStack>

@@ -43,7 +43,7 @@ function MySceneNavBar({ display_return }) {
                                 px={2}
                                 py={1}
                                 as={RouterLink}
-                                to="/home"
+                                to="/"
                                 _hover={{
                                     textDecoration: 'none'
                                 }}

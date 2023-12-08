@@ -31,9 +31,9 @@ root.render(
             <SlidingPanelProvider>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<Alert />} />
-                        <Route path="/message" element={<Message />} />
-                        <Route path="/home" element={<Home />} />
+                        {/* <Route path="/" element={<Alert />} />
+                        <Route path="/message" element={<Message />} /> */}
+                        <Route path="/" element={<Home />} />
                         <Route path="/myScene" element={<MyScene />} />
                         <Route path="/playground" element={<Playground />} />
                         <Route path="/firstPanel" element={<FirstPanel />} />

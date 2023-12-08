@@ -95,10 +95,10 @@ const Projects = ({ theme }) => {
                 </GridItem>
                 <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
-                        <Modal1
-                            isOpen={isOpenModal1}
-                            onOpen={onOpenModal1}
-                            onClose={onCloseModal1}
+                        <Modal6
+                            isOpen={isOpenModal6}
+                            onOpen={onOpenModal6}
+                            onClose={onCloseModal6}
                         />
                     </Center>
                 </GridItem>
@@ -131,10 +131,10 @@ const Projects = ({ theme }) => {
                 </GridItem>
                 <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
-                        <Modal6
-                            isOpen={isOpenModal6}
-                            onOpen={onOpenModal6}
-                            onClose={onCloseModal6}
+                        <Modal1
+                            isOpen={isOpenModal1}
+                            onOpen={onOpenModal1}
+                            onClose={onCloseModal1}
                         />
                     </Center>
                 </GridItem>
