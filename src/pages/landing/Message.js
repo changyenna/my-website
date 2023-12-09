@@ -11,16 +11,15 @@ import {
 import { FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import soundEffect1 from '../../assets/button_click_1.mp3';
-import soundEffect2 from '../../assets/button_click_2.mp3';
-
-import MessageNavBar from '../../nav-bar/MessageNavBar';
+// import soundEffect1 from '../../assets/button_click_1.mp3';
+// import soundEffect2 from '../../assets/button_click_2.mp3';
+// import MessageNavBar from '../../nav-bar/MessageNavBar';
 import LandingPageNavBarCore from '../../nav-bar/LandingPageNavBarCore';
 
-const playSoundEffect = (soundEffect) => {
-    const audio = new Audio(soundEffect);
-    audio.play();
-};
+// const playSoundEffect = (soundEffect) => {
+//     const audio = new Audio(soundEffect);
+//     audio.play();
+// };
 
 const Message = () => {
     const bgColors = useColorModeValue('light.100', 'dark.300');
