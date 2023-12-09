@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import {
     Box,
     Button,
@@ -90,7 +90,7 @@ const Home = () => {
                             showRight ? 'translateX(0)' : 'translateX(-100%)'
                         }
                     >
-                        <Fade bottom>
+                        <Fade>
                             <Box
                                 border="2px solid black"
                                 // minWidth="50px"
@@ -277,7 +277,7 @@ const Home = () => {
 
             {!isLargeDevice && (
                 <>
-                    <Fade bottom>
+                    <Fade>
                         <Box
                             border="2px solid black"
                             // minWidth="50px"
@@ -332,18 +332,18 @@ const Home = () => {
                             // fontWeight="bold"
                         >
                             <GridItem pl="0" area={'music'}>
-                                <Fade bottom>
+                                <Fade>
                                     <MusicPlayer />
                                 </Fade>
                             </GridItem>
                             <GridItem pl="0" area={'memories'}>
-                                <Fade bottom>
+                                <Fade>
                                     <Memories />
                                 </Fade>
                             </GridItem>
                             <GridItem mt={0} pl="0" area={'gmail'}>
                                 <HStack spacing="0px">
-                                    <Fade bottom>
+                                    <Fade>
                                         <Button
                                             variant="ghost"
                                             width="100px"
@@ -368,7 +368,7 @@ const Home = () => {
                                         </Button>
                                     </Fade>
 
-                                    <Fade bottom>
+                                    <Fade>
                                         <Button
                                             variant="ghost"
                                             width="100px"
