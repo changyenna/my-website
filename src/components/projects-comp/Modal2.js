@@ -18,7 +18,8 @@ import {
 // import { PiFolderFill } from 'react-icons/pi';
 import FOLDER from '../../assets/purplef.png';
 // import soundEffect1 from '../assets/button_click_1.mp3';
-import IMG2 from '../../assets/prize.png';
+import IMG from '../../assets/prize.png';
+import IMG2 from '../../assets/winner.png';
 
 // const playSoundEffect = (soundEffect) => {
 //     const audio = new Audio(soundEffect);
@@ -106,9 +107,12 @@ const Modal2 = ({ isOpen, onClose, onOpen }) => {
                                     ></Box>
                                 </HStack>
                             </Box>
-                            <VStack>
-                                <Box mt="20px">
-                                    <img src={IMG2} alt="" />
+                            <VStack mt="20px">
+                                {/* <Box mt="20px">
+                                    <img src={IMG} alt="award" />
+                                </Box> */}
+                                <Box>
+                                    <img src={IMG2} alt="award" />
                                 </Box>
                                 <div
                                     style={{

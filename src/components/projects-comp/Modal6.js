@@ -55,7 +55,7 @@ const Modal6 = ({ isOpen, onClose, onOpen }) => {
                         // bg="pink"
                         width="100px"
                     >
-                        My Playground
+                        Mini Components
                     </Text>
                     {/* <Badge>Completed</Badge> */}
                 </VStack>
@@ -91,7 +91,9 @@ const Modal6 = ({ isOpen, onClose, onOpen }) => {
                                         color={textColors}
                                         pointerEvents="none"
                                     >
-                                        <Text fontSize="md">My Playground</Text>
+                                        <Text fontSize="md">
+                                            Mini Components
+                                        </Text>
                                     </Box>
                                     <Box
                                         onClick={onClose}

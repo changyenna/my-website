@@ -4,22 +4,22 @@ import { Box, VStack, Text } from '@chakra-ui/react';
 const resumeItems = [
     {
         role: 'Web Developer',
-        company: 'Smile Creator',
-        type: 'Freelance',
-        date: 'July 2023 - August 2023',
-        location: 'Perris, CA',
+        company: 'Independent',
+        type: 'Contract',
+        date: 'July 2023 - Present',
+        location: '',
         bullet1:
-            'Designed and developed the Smile Creator Family Dentistry website using Next.js, TypeScript, and Material UI, resulting in a fast, responsive, and visually appealing user experience',
+            'Collaborated closely with clients to understand their specific requirements, translating concepts into functional and visually appealing websites that increased customer engagement',
         bullet2:
-            'Reengineered backend infrastructure with a CI/CD pipeline encompassing AWS CodePipeline, AWS CodeBuild, and AWS Amplify for seamless website deployment and employed AWS Lambda, DynamoDB, and SendGrid to architect an efficient appointment request system for front desk operations',
+            'Demonstrated backend proficiency through the use of languages like TypeScript, frameworks such as Next.js, and technologies including CMS platforms, third-party APIs, and cloud services like AWS',
         bullet3:
-            'Integrated a headless eCommerce store with Shopify using GraphQL APIs, ensuring brand consistency and real-time inventory updates'
+            'Implemented effective SEO strategies and spearheaded page speed optimization initiatives'
     },
     {
         role: 'Peer Educator',
         company: 'UC Riverside',
         type: 'Part-Time',
-        date: 'September 2021 - March 2023',
+        date: 'September 2021 - June 2023',
         location: 'Riverside, CA',
         bullet1:
             'Conducted 3-4 workshops weekly with 70+ first-year students in total, addressing topics such as networking, leadership strategies, proactive academic progression, time management, and mental health awareness',
@@ -33,8 +33,10 @@ const resumeItems = [
         date: 'June 2021 - September 2021',
         location: 'Perris, CA',
         bullet1:
-            'Leveraged insurance and financial options for 20+ patients weekly, analyzing treatment choices and ensuring clear comprehension of diagnoses, resulting in a 10% increase in treatment acceptance rate',
+            'Leveraged insurance and financial options for 20+ patients weekly, analyzing treatment plans and ensuring clear comprehension of diagnoses, resulting in a 10% increase in treatment acceptance rate',
         bullet2:
+            'Managed hygiene schedules in collaboration with assigned doctor, attracting a monthly average of 40+ new patients, maximizing practice growth',
+        bullet3:
             'Earned a 5-Star Certification from the Scheduling Institute by successfully completing the 5-Star Call Challenge and demonstrating exceptional customer service skills in a dental receptionist role'
     }
 ];

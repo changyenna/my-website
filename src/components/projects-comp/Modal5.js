@@ -108,10 +108,10 @@ const Modal5 = ({ isOpen, onClose, onOpen }) => {
                                     ></Box>
                                 </HStack>
                             </Box>
-                            <VStack>
-                                <Box mt="20px">
+                            <VStack mt="20px">
+                                {/* <Box mt="20px">
                                     <img src={IMG} alt="" />
-                                </Box>
+                                </Box> */}
                                 <div
                                     style={{
                                         display: 'flex',
@@ -234,7 +234,7 @@ const Modal5 = ({ isOpen, onClose, onOpen }) => {
                                     fontWeight="normal"
                                     bg={buttonColors}
                                 >
-                                    Visit website
+                                    Visit Website
                                 </Button>
                             </ModalFooter>
                         </VStack>
