@@ -14,7 +14,8 @@ import {
     Stack,
     Wrap,
     WrapItem,
-    Tag
+    Tag,
+    Tooltip
 } from '@chakra-ui/react';
 // import { PiFolderFill } from 'react-icons/pi';
 // import soundEffect1 from '../assets/button_click_1.mp3';
@@ -42,14 +43,18 @@ const Modal1 = ({ isOpen, onClose, onOpen }) => {
         <>
             <Center>
                 <VStack cursor="pointer" spacing={0}>
-                    <div>
+                    <Tooltip
+                        label={`Quick Look`}
+                        aria-label="A tooltip"
+                        placement="right"
+                    >
                         <img
                             src={FOLDER}
                             onClick={onOpen}
                             size={70}
                             style={{ color: f1Colors }}
                         />
-                    </div>
+                    </Tooltip>
                     <Stack direction={{ lg: 'row', md: 'row', sm: 'column' }}>
                         {' '}
                         <Text
@@ -57,6 +62,7 @@ const Modal1 = ({ isOpen, onClose, onOpen }) => {
                             fontSize="sm"
                             textAlign="center"
                             // bgColor="pink"
+                            onClick={onOpen}
                             width="100px"
                         >
                             My 3D Scene

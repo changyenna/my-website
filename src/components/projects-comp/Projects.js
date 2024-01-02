@@ -4,7 +4,7 @@ import {
     Grid,
     GridItem,
     Center,
-    useColorModeValue,
+    Tooltip,
     useDisclosure
 } from '@chakra-ui/react';
 // import { SiDevpost } from 'react-icons/si';

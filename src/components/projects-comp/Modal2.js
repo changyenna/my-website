@@ -13,7 +13,8 @@ import {
     Button,
     Wrap,
     WrapItem,
-    Tag
+    Tag,
+    Tooltip
 } from '@chakra-ui/react';
 // import { PiFolderFill } from 'react-icons/pi';
 import FOLDER from '../../assets/purplef.png';
@@ -41,19 +42,24 @@ const Modal2 = ({ isOpen, onClose, onOpen }) => {
         <>
             <Center>
                 <VStack cursor="pointer" spacing={0}>
-                    <div>
+                    <Tooltip
+                        label={`Quick Look`}
+                        aria-label="A tooltip"
+                        placement="right"
+                    >
                         <img
                             src={FOLDER}
                             onClick={onOpen}
                             size={70}
                             style={{ color: f2Colors }}
                         />
-                    </div>
+                    </Tooltip>
                     <Text
                         fontWeight="medium"
                         fontSize="sm"
                         textAlign="center"
                         // bg="pink"
+                        onClick={onOpen}
                         width="100px"
                     >
                         Songnality

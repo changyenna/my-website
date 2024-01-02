@@ -13,7 +13,8 @@ import {
     Button,
     Wrap,
     WrapItem,
-    Tag
+    Tag,
+    Tooltip
 } from '@chakra-ui/react';
 // import { PiFolderFill } from 'react-icons/pi';
 // import soundEffect1 from '../assets/button_click_1.mp3';
@@ -42,19 +43,24 @@ const Modal3 = ({ isOpen, onClose, onOpen }) => {
         <>
             <Center>
                 <VStack cursor="pointer" spacing={0}>
-                    <div>
+                    <Tooltip
+                        label={`Quick Look`}
+                        aria-label="A tooltip"
+                        placement="right"
+                    >
                         <img
                             src={FOLDER}
                             onClick={onOpen}
                             size={70}
                             style={{ color: f3Colors }}
                         />
-                    </div>
+                    </Tooltip>
                     <Text
                         fontWeight="medium"
                         fontSize="sm"
                         textAlign="center"
                         // bg="pink"
+                        onClick={onOpen}
                         width="100px"
                     >
                         Ment-To-Be
