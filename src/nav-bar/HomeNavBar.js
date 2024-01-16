@@ -37,7 +37,7 @@ const HomeNavBar = () => {
 
     const pageData = [
         {
-            url: 'https://www.linkedin.com/in/yenna-chang/',
+            url: 'https://www.linkedin.com/in/isabelle-y-chang/',
             title: 'About'
         },
         {

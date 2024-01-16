@@ -18,7 +18,7 @@ import {
     useColorMode
 } from '@chakra-ui/react';
 // import { FaEnvelope } from 'react-icons/fa';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import DIARY from '../../assets/diary.png';
 
 import PDF from '../../assets/pdf.png';
@@ -175,14 +175,25 @@ const Home = () => {
                                             as="a" // Use the "as" prop to change the button's root element to anchor tag
                                         >
                                             <VStack>
-                                                <a href="mailto:yenna.chang@gmail.com">
+                                                {/* <Link to="/contact">
                                                     <Box>
                                                         <img
                                                             src={GMAIL}
-                                                            alt="Compose Email"
+                                                            alt="Contact"
                                                         />
                                                     </Box>
 
+                                                    <Text fontWeight="normal">
+                                                        Contact
+                                                    </Text>
+                                                </Link> */}
+                                                <a href="mailto:yennaisabelle@gmail.com">
+                                                    <Box>
+                                                        <img
+                                                            src={GMAIL}
+                                                            alt="Contact"
+                                                        />
+                                                    </Box>
                                                     <Text fontWeight="normal">
                                                         Contact
                                                     </Text>
@@ -349,17 +360,28 @@ const Home = () => {
                                             width="100px"
                                             height="100px"
                                             // _hover={{ backgroundColor: 'red' }}
-                                            as="a" // Use the "as" prop to change the button's root element to anchor tag
+                                            as="a"
                                         >
                                             <VStack>
-                                                <a href="mailto:yenna.chang@gmail.com">
+                                                {/* <Link to="/contact">
                                                     <Box>
                                                         <img
                                                             src={GMAIL}
-                                                            alt="Compose Email"
+                                                            alt="Contact"
                                                         />
                                                     </Box>
 
+                                                    <Text fontWeight="normal">
+                                                        Contact
+                                                    </Text>
+                                                </Link> */}
+                                                <a href="mailto:yennaisabelle@gmail.com">
+                                                    <Box>
+                                                        <img
+                                                            src={GMAIL}
+                                                            alt="Contact"
+                                                        />
+                                                    </Box>
                                                     <Text fontWeight="normal">
                                                         Contact
                                                     </Text>

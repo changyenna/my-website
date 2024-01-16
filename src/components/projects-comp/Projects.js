@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-    Box,
-    Grid,
-    GridItem,
-    Center,
-    Tooltip,
-    useDisclosure
-} from '@chakra-ui/react';
+import { Box, Grid, GridItem, Center, useDisclosure } from '@chakra-ui/react';
 // import { SiDevpost } from 'react-icons/si';
 // import { PiFolderFill } from 'react-icons/pi';
 // import { FaGithubAlt, FaRegHandPointRight } from 'react-icons/fa';

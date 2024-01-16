@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, createLocalStorageManager } from '@chakra-ui/react';
 
@@ -21,6 +21,7 @@ import Playground from './pages/playground/playground';
 import { SlidingPanelProvider } from './pages/home/SlidingPanelContext';
 import FirstPanel from './pages/home/FirstPanel';
 import SecondPanel from './pages/home/SecondPanel';
+import Contact from './pages/Contact';
 // import Projects from './nav-bar/Projects';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,6 +39,7 @@ root.render(
                         <Route path="/playground" element={<Playground />} />
                         <Route path="/firstPanel" element={<FirstPanel />} />
                         <Route path="/secondPanel" element={<SecondPanel />} />
+                        <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </BrowserRouter>
             </SlidingPanelProvider>

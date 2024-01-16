@@ -87,7 +87,7 @@ const About = ({ theme }) => {
                             fontSize={{ lg: '5xl', md: '5xl', sm: '4xl' }}
                             fontWeight="black"
                         >
-                            Yenna Chang
+                            Isabelle Chang
                         </Text>
                         <VStack align="left">
                             <HStack>

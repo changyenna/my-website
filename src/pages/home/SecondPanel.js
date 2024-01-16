@@ -10,6 +10,7 @@ import {
     Stack,
     useBreakpointValue
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import Memories from '../../components/memories-comp/Memories';
 import MusicPlayer from '../../components/music-player-comp/MusicPlayer';
 // import Fade from 'react-reveal/Fade';
@@ -20,10 +21,6 @@ const SecondPanel = ({ className }) => {
     // const bgColors = useColorModeValue('light.100', 'dark.300');
 
     const templateAreas = useBreakpointValue({
-        lg: `"memories music"
-            "gmail music"
-            "pdf music"
-            "pdf music"`,
         lg: `"memories music"
             "gmail music"
             "pdf music"
@@ -65,13 +62,13 @@ const SecondPanel = ({ className }) => {
                             as="a"
                         >
                             <VStack>
-                                <a href="mailto:yenna.chang@gmail.com">
+                                <Link to="/contact">
                                     <Box>
-                                        <img src={GMAIL} alt="Compose Email" />
+                                        <img src={GMAIL} alt="Contact" />
                                     </Box>
 
                                     <Text fontWeight="normal">Contact</Text>
-                                </a>
+                                </Link>
                             </VStack>
                         </Button>
                         {/* </Fade> */}
@@ -90,7 +87,7 @@ const SecondPanel = ({ className }) => {
                                     rel="noreferrer"
                                 >
                                     <Box>
-                                        <img src={PDF} />
+                                        <img src={PDF} alt="pdf icon" />
                                     </Box>
                                     <Text fontWeight="normal">Resume</Text>
                                 </a>
