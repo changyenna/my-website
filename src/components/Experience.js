@@ -3,7 +3,18 @@ import { Box, VStack, Text } from '@chakra-ui/react';
 
 const resumeItems = [
     {
-        role: 'Web Developer',
+        role: 'Program Assistant',
+        company: 'Kaimore',
+        type: 'Contract',
+        date: 'January 2024 - Present',
+        location: '',
+        bullet1:
+            'Manage and optimize backend pre-event workflows, demonstrating precise control over program schedules, refining booking systems, and orchestrating efficient registrant data management with proficiency in event management software and technologies like Google Apps Script',
+        bullet2:
+            "Enhance organization's website by restructuring based on research and user flow analysis, and implement advanced functionalities, such as the integration of an AI assistant chat powered by the OpenAI API"
+    },
+    {
+        role: 'Freelance Web Developer',
         company: 'Independent',
         type: 'Contract',
         date: 'July 2023 - Present',
