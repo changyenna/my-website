@@ -22,6 +22,8 @@ import image9 from '../../assets/c9.png';
 import image10 from '../../assets/c10.png';
 import image11 from '../../assets/c11.png';
 import image12 from '../../assets/c12.png';
+import image13 from '../../assets/c13.webp';
+import image14 from '../../assets/c14.webp';
 
 const Slideshow = () => {
     const images = [
@@ -40,12 +42,16 @@ const Slideshow = () => {
         {
             original: image1
         },
+
         {
             original: image9
         },
         {
             original: image11
         },
+        // {
+        //     original: image13
+        // },
         {
             original: image10
         },
@@ -53,11 +59,9 @@ const Slideshow = () => {
             original: image12
         }
         // {
-        //     original: image4
-        // },
-        // {
-        //     original: image7
-        // },
+        //     original: image14
+        // }
+
         // {
         //     original: image8
         // }

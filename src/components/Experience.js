@@ -5,7 +5,7 @@ const resumeItems = [
     {
         role: 'Program Assistant',
         company: 'Kaimore',
-        type: 'Contract',
+        type: 'Full-time • Contract',
         date: 'January 2024 - Present',
         location: '',
         bullet1:

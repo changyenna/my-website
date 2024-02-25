@@ -75,11 +75,11 @@ const Player = ({ theme }) => {
                 'https://i.scdn.co/image/ab67616d0000b2733317fc12f8b9a9a0b8459766'
         },
         {
-            name: 'Perfect',
-            artist: 'One Direction',
-            src: 'https://p.scdn.co/mp3-preview/ba309a7db943a8cc2445d1f744685d1d30bb47ca',
+            name: 'get him back!',
+            artist: 'Olivia Rodrigo',
+            src: 'https://p.scdn.co/mp3-preview/8b5805a0fb24641ff34f1649ab448a16c219f073',
             thumbnail:
-                'https://i.scdn.co/image/ab67616d0000b273241e4fe75732c9c4b49b94c3'
+                'https://i.scdn.co/image/ab67616d0000b273e85259a1cae29a8d91f2093d'
         },
         {
             name: 'ASAP',
@@ -89,11 +89,11 @@ const Player = ({ theme }) => {
                 'https://i.scdn.co/image/ab67616d00001e020744690248ef3ba7b776ea7b'
         },
         {
-            name: "Daydreamin'",
-            artist: 'Ariana Grande',
-            src: 'https://p.scdn.co/mp3-preview/93e4be5a95e286a478b678d99e897e86af14c50a',
+            name: "You Don't Ignore (Midnight)",
+            artist: 'Petit Biscuit',
+            src: 'https://p.scdn.co/mp3-preview/4fbc1cbfd5f3465515dd0d2cd38242350591ced8',
             thumbnail:
-                'https://i.scdn.co/image/ab67616d0000b273db6ed492fdc27def8f979263'
+                'https://i.scdn.co/image/ab67616d0000b273824f97701e1347415da80bd8'
         }
     ];
 
@@ -320,8 +320,8 @@ const Player = ({ theme }) => {
                                         ? 'blackAlpha.400'
                                         : 'blackAlpha.500'
                                     : prevHovered
-                                    ? 'whiteAlpha.900'
-                                    : 'whiteAlpha.600'
+                                      ? 'whiteAlpha.900'
+                                      : 'whiteAlpha.600'
                             }
                         />
 
@@ -355,8 +355,8 @@ const Player = ({ theme }) => {
                                         ? 'blackAlpha.400'
                                         : 'blackAlpha.500'
                                     : nextHovered
-                                    ? 'whiteAlpha.900'
-                                    : 'whiteAlpha.600'
+                                      ? 'whiteAlpha.900'
+                                      : 'whiteAlpha.600'
                             }
                         />
                     </HStack>
