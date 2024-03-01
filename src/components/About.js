@@ -135,7 +135,7 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    Javascript
+                                    Python
                                 </Tag>
                             </WrapItem>
                             <WrapItem>
@@ -145,7 +145,7 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    Python
+                                    Javascript
                                 </Tag>
                             </WrapItem>
                             <WrapItem>
@@ -175,7 +175,7 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    React.js
+                                    MERN
                                 </Tag>
                             </WrapItem>
                             <WrapItem>

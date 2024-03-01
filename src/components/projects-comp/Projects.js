@@ -16,6 +16,7 @@ import Modal4 from './Modal4';
 import Modal5 from './Modal5';
 import Modal6 from './Modal6';
 import Modal7 from './Modal7';
+import Modal8 from './Modal8';
 // import Footer from '../footer/Footer';
 
 // const playSoundEffect = (soundEffect) => {
@@ -71,6 +72,12 @@ const Projects = ({ theme }) => {
         onClose: onCloseModal7
     } = useDisclosure();
 
+    const {
+        isOpen: isOpenModal8,
+        onOpen: onOpenModal8,
+        onClose: onCloseModal8
+    } = useDisclosure();
+
     return (
         <Box
             // bg="red"
@@ -84,6 +91,15 @@ const Projects = ({ theme }) => {
             // display="flex"
         >
             <Grid templateColumns="repeat(6, 1fr)" gap={9} rowGap={'100px'}>
+                <GridItem colSpan={2} h="10" bg="transparent">
+                    <Center>
+                        <Modal8
+                            isOpen={isOpenModal8}
+                            onOpen={onOpenModal8}
+                            onClose={onCloseModal8}
+                        />
+                    </Center>
+                </GridItem>
                 <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
                         <Modal7

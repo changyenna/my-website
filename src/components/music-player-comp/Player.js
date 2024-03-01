@@ -26,11 +26,32 @@ const Player = ({ theme }) => {
                 'https://i.scdn.co/image/ab67616d0000b273e242f18dafe885fcf425fe1f'
         },
         {
-            name: 'Steal The Show - From "Elemental"',
-            artist: 'Lauv',
-            src: 'https://p.scdn.co/mp3-preview/10e33778e2bec7f8d58eea48d23776cf4f299b63',
+            name: 'Dreams, Fairytales, Fantasies ...',
+            artist: 'A$AP Ferg, Brent Faiyaz, Salaam Remi',
+            src: 'https://p.scdn.co/mp3-preview/02788afc758468a99a8ed287118abb6a81217180',
             thumbnail:
-                'https://i.scdn.co/image/ab67616d0000b27322bbb2bd9c0d6bec5057d535'
+                'https://i.scdn.co/image/ab67616d0000b27380dacac510e9d085a591f981'
+        },
+        {
+            name: 'Guilty Conscience',
+            artist: '070 Shake',
+            src: 'https://p.scdn.co/mp3-preview/d5dc8db7dfd2fb335ec8867502c5a9e5b3477f2e',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b27320921767dd81e8f90ef9fc71'
+        },
+        // {
+        //     name: 'Steal The Show - From "Elemental"',
+        //     artist: 'Lauv',
+        //     src: 'https://p.scdn.co/mp3-preview/10e33778e2bec7f8d58eea48d23776cf4f299b63',
+        //     thumbnail:
+        //         'https://i.scdn.co/image/ab67616d0000b27322bbb2bd9c0d6bec5057d535'
+        // },
+        {
+            name: "You Don't Ignore (Midnight)",
+            artist: 'Petit Biscuit',
+            src: 'https://p.scdn.co/mp3-preview/4fbc1cbfd5f3465515dd0d2cd38242350591ced8',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b273824f97701e1347415da80bd8'
         },
         {
             name: 'Magic',
@@ -87,13 +108,6 @@ const Player = ({ theme }) => {
             src: 'https://p.scdn.co/mp3-preview/6e580649e577986e9f28e7b7c5e7326577bd9605',
             thumbnail:
                 'https://i.scdn.co/image/ab67616d00001e020744690248ef3ba7b776ea7b'
-        },
-        {
-            name: "You Don't Ignore (Midnight)",
-            artist: 'Petit Biscuit',
-            src: 'https://p.scdn.co/mp3-preview/4fbc1cbfd5f3465515dd0d2cd38242350591ced8',
-            thumbnail:
-                'https://i.scdn.co/image/ab67616d0000b273824f97701e1347415da80bd8'
         }
     ];
 

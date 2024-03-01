@@ -5,9 +5,9 @@ const resumeItems = [
     {
         role: 'Program Assistant',
         company: 'Kaimore',
-        type: 'Full-time • Contract',
+        type: 'Contract',
         date: 'January 2024 - Present',
-        location: '',
+        location: 'City of Industry, CA',
         bullet1:
             'Manage and optimize backend pre-event workflows, demonstrating precise control over program schedules, refining booking systems, and orchestrating efficient registrant data management with proficiency in event management software and technologies like Google Apps Script',
         bullet2:

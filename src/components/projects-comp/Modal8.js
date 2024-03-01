@@ -18,16 +18,16 @@ import {
 } from '@chakra-ui/react';
 // import { PiFolderFill } from 'react-icons/pi';
 // import soundEffect1 from '../assets/button_click_1.mp3';
-// import IMG from '../../assets/volunteer.png';
-import FOLDER from '../../assets/pinkf.png';
-import GIF from '../../assets/also_recording.gif';
+import IMG from '../../assets/kaimore-screenshot.png';
+import FOLDER from '../../assets/purplef.png';
+// import GIF from '../../assets/kaimore-screen-recording.gif';
 
 // const playSoundEffect = (soundEffect) => {
 //     const audio = new Audio(soundEffect);
 //     audio.play();
 // };
 
-const Modal7 = ({ isOpen, onClose, onOpen }) => {
+const Modal8 = ({ isOpen, onClose, onOpen }) => {
     const bgColors = useColorModeValue('light.100', 'dark.300');
     const titleBar = useColorModeValue('light.400', 'dark.800');
     const buttonColors = useColorModeValue('light.300', 'light.400');
@@ -62,7 +62,7 @@ const Modal7 = ({ isOpen, onClose, onOpen }) => {
                         onClick={onOpen}
                         width="100px"
                     >
-                        Another Life Saved Org
+                        Kaimore
                     </Text>
                 </VStack>
 
@@ -99,8 +99,7 @@ const Modal7 = ({ isOpen, onClose, onOpen }) => {
                                         pointerEvents="none"
                                     >
                                         <Text fontSize="md">
-                                            Another Life Saved Organization
-                                            Website
+                                            Kaimore Website
                                         </Text>
                                     </Box>
                                     <Box
@@ -132,11 +131,10 @@ const Modal7 = ({ isOpen, onClose, onOpen }) => {
                                 >
                                     <VStack>
                                         <Text fontSize="md" fontWeight="bold">
-                                            Another Life Saved Organization
-                                            Website
+                                            Kaimore Website
                                         </Text>
                                         <Box>
-                                            <img src={GIF} />
+                                            <img src={IMG} />
                                         </Box>
                                         {/* <Text fontSize="md">
                                             July - August 2023
@@ -186,6 +184,16 @@ const Modal7 = ({ isOpen, onClose, onOpen }) => {
                                                 color={textColors}
                                                 bg={titleBar}
                                             >
+                                                OpenAI API
+                                            </Tag>
+                                        </WrapItem>
+                                        <WrapItem>
+                                            <Tag
+                                                v
+                                                variant="solid"
+                                                color={textColors}
+                                                bg={titleBar}
+                                            >
                                                 SEO
                                             </Tag>
                                         </WrapItem>
@@ -195,7 +203,7 @@ const Modal7 = ({ isOpen, onClose, onOpen }) => {
                             <ModalFooter>
                                 <Button
                                     as="a"
-                                    href="https://www.anotherlifesaved.org/"
+                                    href="https://www.kaimore.org/"
                                     target="_blank"
                                     // onClick={() =>
                                     //     playSoundEffect(soundEffect1)
@@ -223,4 +231,4 @@ const Modal7 = ({ isOpen, onClose, onOpen }) => {
     );
 };
 
-export default Modal7;
+export default Modal8;
