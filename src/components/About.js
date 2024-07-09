@@ -210,14 +210,14 @@ const About = ({ theme }) => {
                             Bio
                         </Text>
                         <Text fontSize={{ lg: 'md', md: 'md', sm: 'sm' }}>
-                            I am a recent graduate from UCR with a degree in
-                            Psychology and Computer Science. I've always been
-                            the kind of person who is passionate about making
-                            creative ideas come to life and have found a love
-                            for building projects with my colleagues. When I'm
-                            not working on my programming skills, I love
-                            discovering new music on Spotify, hitting the gym,
-                            and spending time with my friends!
+                            Hello! My name is Isabelle, and I am currently
+                            pursuing a Master's in Computer Science at Georgia
+                            Tech. I've always been the kind of person who is
+                            passionate about making creative ideas come to life
+                            and have found a love for building projects with my
+                            colleagues. When I'm not working on my programming
+                            skills, I love discovering new music on Spotify,
+                            hitting the gym, and spending time with my friends!
                         </Text>
                     </VStack>
                 </GridItem>
