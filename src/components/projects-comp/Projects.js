@@ -17,6 +17,7 @@ import Modal5 from './Modal5';
 import Modal6 from './Modal6';
 import Modal7 from './Modal7';
 import Modal8 from './Modal8';
+import Modal9 from './Modal9';
 // import Footer from '../footer/Footer';
 
 // const playSoundEffect = (soundEffect) => {
@@ -78,6 +79,12 @@ const Projects = ({ theme }) => {
         onClose: onCloseModal8
     } = useDisclosure();
 
+    const {
+        isOpen: isOpenModal9,
+        onOpen: onOpenModal9,
+        onClose: onCloseModal9
+    } = useDisclosure();
+
     return (
         <Box
             // bg="red"
@@ -93,6 +100,15 @@ const Projects = ({ theme }) => {
             <Grid templateColumns="repeat(6, 1fr)" gap={9} rowGap={'100px'}>
                 <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
+                        <Modal5
+                            isOpen={isOpenModal5}
+                            onOpen={onOpenModal5}
+                            onClose={onCloseModal5}
+                        />
+                    </Center>
+                </GridItem>
+                <GridItem colSpan={2} h="10" bg="transparent">
+                    <Center>
                         <Modal8
                             isOpen={isOpenModal8}
                             onOpen={onOpenModal8}
@@ -102,19 +118,19 @@ const Projects = ({ theme }) => {
                 </GridItem>
                 <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
-                        <Modal7
-                            isOpen={isOpenModal7}
-                            onOpen={onOpenModal7}
-                            onClose={onCloseModal7}
+                        <Modal9
+                            isOpen={isOpenModal9}
+                            onOpen={onOpenModal9}
+                            onClose={onCloseModal9}
                         />
                     </Center>
                 </GridItem>
                 <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
-                        <Modal5
-                            isOpen={isOpenModal5}
-                            onOpen={onOpenModal5}
-                            onClose={onCloseModal5}
+                        <Modal7
+                            isOpen={isOpenModal7}
+                            onOpen={onOpenModal7}
+                            onClose={onCloseModal7}
                         />
                     </Center>
                 </GridItem>
