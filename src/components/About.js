@@ -135,6 +135,16 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
+                                    C#
+                                </Tag>
+                            </WrapItem>
+                            <WrapItem>
+                                <Tag
+                                    size="sm"
+                                    variant="solid"
+                                    color={textColors}
+                                    bg={titleBar}
+                                >
                                     Python
                                 </Tag>
                             </WrapItem>
@@ -145,7 +155,7 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    Javascript
+                                    React.js
                                 </Tag>
                             </WrapItem>
                             <WrapItem>
@@ -155,7 +165,7 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    TypeScript
+                                    JavaScript
                                 </Tag>
                             </WrapItem>
                             <WrapItem>
@@ -165,7 +175,7 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    HTML5/CSS3
+                                    Agile
                                 </Tag>
                             </WrapItem>
                             <WrapItem>
@@ -175,7 +185,7 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    MERN
+                                    OOP
                                 </Tag>
                             </WrapItem>
                             <WrapItem>
@@ -185,7 +195,7 @@ const About = ({ theme }) => {
                                     color={textColors}
                                     bg={titleBar}
                                 >
-                                    GraphQL
+                                    SQL
                                 </Tag>
                             </WrapItem>
                         </Wrap>

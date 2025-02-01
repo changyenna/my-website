@@ -3,10 +3,19 @@ import { Box, VStack, Text } from '@chakra-ui/react';
 
 const resumeItems = [
     {
+        role: 'Application Development & Support Intern',
+        company: 'San Bernardino County ATC - IT Division',
+        type: 'Internship',
+        date: 'December 2025 - Present',
+        location: 'San Bernardino, CA',
+        bullet1:
+            'Modernize applications, including redesigning the ATC website, by developing features in React.js and C#, integrating with Contentful and Microsoft SQL Server, adhering to Agile practices, leveraging CI/CD pipelines, and using GitHub for seamless integration and feature delivery'
+    },
+    {
         role: 'Program Assistant',
         company: 'Kaimore',
         type: 'Contract',
-        date: 'January 2024 - Present',
+        date: 'January 2024 - April 2024',
         location: 'City of Industry, CA',
         bullet1:
             'Manage and optimize backend pre-event workflows, demonstrating precise control over program schedules, refining booking systems, and orchestrating efficient registrant data management with proficiency in event management software and technologies like Google Apps Script',
