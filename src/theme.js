@@ -63,7 +63,6 @@ const theme = extendTheme({
             300: '#2B2937',
             800: '#4F5365',
             900: '#23212E'
-
             // ...
         },
         light: {

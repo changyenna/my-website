@@ -116,10 +116,10 @@ const Home = () => {
                                     borderLeft="none"
                                     borderTopLeftRadius="8px"
                                     borderTopRightRadius="8px"
-                                    borderBottom="2px solid black"
+                                    // borderBottom="2px solid black"
                                     width="100%"
                                     height="40px"
-                                    bg={titleBar}
+                                    // bg={titleBar}
                                 >
                                     <HomeNavBar display_return={true} />
                                 </Box>

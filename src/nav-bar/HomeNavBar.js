@@ -18,22 +18,19 @@ import {
     AiOutlineArrowRight,
     AiOutlineReload
 } from 'react-icons/ai';
-
-// import Alert from '../pages/landing/Alert';
-// import Message from '../pages/landing/Message';
 import Projects from '../components/projects-comp/Projects';
 import About from '../components/About';
 import Experience from '../components/Experience';
 
 const HomeNavBar = () => {
+    const textColors = useColorModeValue('black', 'white');
     const bgColors = useColorModeValue('light.100', 'dark.300');
-    const titleBarColors = useColorModeValue('light.400', 'dark.800');
-    // const buttonColors = useColorModeValue('light.300', 'dark.200');
-    // const textColors = useColorModeValue('light.1000', 'dark.100');
+    const titleBarColors = useColorModeValue('light.400', '#3B3F50');
     const formColors = useColorModeValue('#FAFAFA', 'dark.800');
-    // const plusColors = useColorModeValue('#FAB4DF', '#5D6071');
-    // const bookmarkColors = useColorModeValue('yellow.400', 'light.400');
     const tabHighlightColors = useColorModeValue('black', 'purple');
+
+    const selectedTabBg = useColorModeValue('purple.500', 'purple.700');
+    const hoverTabBg = useColorModeValue('light.200', 'dark.900');
 
     const pageData = [
         {
@@ -56,10 +53,16 @@ const HomeNavBar = () => {
         return pageData.map((data, index) => (
             <Tab
                 key={index}
-                borderBottom="0px"
-                mr={{ lg: 4, md: 4, sm: 0 }}
                 fontSize={{ lg: 'md', md: 'md', sm: 'sm' }}
-                fontWeight={{ lg: 'medium', md: 'medium', sm: 'medium' }}
+                fontWeight="medium"
+                bg={titleBarColors}
+                flex="1"
+                textAlign="center"
+                _selected={{ bg: formColors, color: textColors }}
+                _hover={{ bg: hoverTabBg, opacity: 0.9 }}
+                _focus={{ boxShadow: 'outline' }}
+                borderTopRightRadius={'8px'}
+                borderTopLeftRadius={'8px'}
             >
                 {data.title}
             </Tab>
@@ -79,12 +82,7 @@ const HomeNavBar = () => {
             }
 
             return (
-                <TabPanel
-                    key={index}
-                    bg={bgColors}
-                    border="0px transparent solid"
-                    h="550px"
-                >
+                <TabPanel key={index} bg={bgColors} h="550px" zIndex={99}>
                     <Box
                         bg={formColors}
                         margin="-16px -16px 0"
@@ -160,71 +158,28 @@ const HomeNavBar = () => {
 
     return (
         <Box
-            padding="0px 0px"
-            borderTopLeftRadius="8px"
-            borderTopRightRadius="8px"
-            borderBottomLeftRadius="8px"
-            borderBottomRightRadius="8px"
-            height={{ lg: '400px', md: '400px', sm: '1000px' }}
+            padding="0px"
+            borderRadius="8px"
+            bg={titleBarColors}
+            // height={{ lg: '400px', md: '400px', sm: '1000px' }}
+            display="flex"
+            flexDirection="column"
+            zIndex={-99}
         >
-            <Flex direction="column">
-                <Box
-                    display="flex"
-                    flexDirection="column"
-                    borderTopLeftRadius="8px"
-                    borderTopRightRadius="8px"
-                    // borderBottom="1px solid #B6B4B6"
-                    mb={0}
-                    bg={titleBarColors}
-                >
-                    <Tabs
-                        isFitted
-                        variant="enclosed"
-                        colorScheme={tabHighlightColors}
-                        onChange={handleTabChange}
-
-                        // mr={5}
+            <Box borderRadius="8px">
+                <Tabs variant="enclosed-colored" onChange={handleTabChange}>
+                    <TabList
+                        borderBottom="0px white solid"
+                        padding="0px"
+                        width="100%"
+                        display="flex"
+                        justifyContent="space-between"
                     >
-                        <TabList>
-                            {renderTabs()}
-                            {/* <Hide below="md">
-                                <Button
-                                    size="sm"
-                                    borderRadius="full"
-                                    bg={plusColors}
-                                    ml={3}
-                                    mt={1}
-                                    p={0}
-                                >
-                                    +
-                                </Button>
-                            </Hide> */}
-                        </TabList>
-                        <TabPanels>{renderTabPanels()}</TabPanels>
-                    </Tabs>
-                </Box>
-                {/* <Flex
-                    alignItems="center"
-                    height="36px"
-                    padding="0 6px"
-                    backgroundColor="#FFFFFF"
-                >
-                    <Button size="xs" borderRadius="full">
-                        <Icon as={AiFillCaretLeft} boxSize={4} />
-                    </Button>
-                    <Button size="xs" borderRadius="full" ml={1}>
-                        <Icon as={AiFillCaretRight} boxSize={4} />
-                    </Button>
-                    <Input
-                        variant="filled"
-                        size="xs"
-                        borderRadius="full"
-                        ml={2}
-                        mr={1}
-                    />
-                    <Button size="xs">Go</Button>
-                </Flex> */}
-            </Flex>
+                        {renderTabs()}
+                    </TabList>
+                    <TabPanels>{renderTabPanels()}</TabPanels>
+                </Tabs>
+            </Box>
         </Box>
     );
 };
