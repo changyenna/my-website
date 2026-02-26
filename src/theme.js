@@ -43,6 +43,10 @@ const styles = {
 
 // example theme
 const theme = extendTheme({
+    config: {
+        initialColorMode: 'dark',
+        useSystemColorMode: false
+    },
     styles,
     breakpoints: {
         sm: '320px',
