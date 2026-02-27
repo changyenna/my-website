@@ -108,8 +108,7 @@ const About = ({ theme }) => {
                                     }}
                                     fontWeight="normal"
                                 >
-                                    Software Engineer in Los Angeles
-                                    Metropolitan Area
+                                    Programmer Analyst in Southern California
                                 </Text>
                             </HStack>
                         </VStack>
@@ -220,14 +219,15 @@ const About = ({ theme }) => {
                             Bio
                         </Text>
                         <Text fontSize={{ lg: 'md', md: 'md', sm: 'sm' }}>
-                            Hello! My name is Isabelle, and I am currently
+                            Hi there!👋 My name is Isabelle, and I am a programmer analyst. 
+                            I am currently working for the San Bernardino County Tax Collector's office (ATC), while also
                             pursuing a Master's in Computer Science at Georgia
-                            Tech. I've always been the kind of person who is
+                            Tech (online). I've always been the kind of person who is
                             passionate about making creative ideas come to life
-                            and have found a love for building projects with my
-                            colleagues. When I'm not working on my programming
+                            and have found a love for building projects through technology!
+                            When I'm not working on my programming
                             skills, I love discovering new music on Spotify,
-                            hitting the gym, and spending time with my friends!
+                            hitting the gym, and spending time with my friends! Thanks for stopping by hehe.
                         </Text>
                     </VStack>
                 </GridItem>

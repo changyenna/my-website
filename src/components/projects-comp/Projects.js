@@ -9,15 +9,15 @@ import { Box, Grid, GridItem, Center, useDisclosure } from '@chakra-ui/react';
 // import soundEffect1 from '../../assets/button_click1.mp3';
 // import soundEffect2 from '../../assets/button_click_2.mp3';
 // import { MdWbAuto } from 'react-icons/md';
-import Modal1 from './Modal1';
-import Modal2 from './Modal2';
+// import Modal1 from './Modal1';
+// import Modal2 from './Modal2';
 import Modal3 from './Modal3';
 import Modal4 from './Modal4';
 import Modal5 from './Modal5';
 import Modal6 from './Modal6';
-import Modal7 from './Modal7';
-import Modal8 from './Modal8';
-import Modal9 from './Modal9';
+// import Modal7 from './Modal7';
+// import Modal8 from './Modal8';
+// import Modal9 from './Modal9';
 // import Footer from '../footer/Footer';
 
 // const playSoundEffect = (soundEffect) => {
@@ -79,11 +79,11 @@ const Projects = ({ theme }) => {
         onClose: onCloseModal8
     } = useDisclosure();
 
-    const {
-        isOpen: isOpenModal9,
-        onOpen: onOpenModal9,
-        onClose: onCloseModal9
-    } = useDisclosure();
+    // const {
+    //     isOpen: isOpenModal9,
+    //     onOpen: onOpenModal9,
+    //     onClose: onCloseModal9
+    // } = useDisclosure();
 
     return (
         <Box
@@ -107,7 +107,7 @@ const Projects = ({ theme }) => {
                         />
                     </Center>
                 </GridItem>
-                <GridItem colSpan={2} h="10" bg="transparent">
+                {/* <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
                         <Modal8
                             isOpen={isOpenModal8}
@@ -115,8 +115,8 @@ const Projects = ({ theme }) => {
                             onClose={onCloseModal8}
                         />
                     </Center>
-                </GridItem>
-                <GridItem colSpan={2} h="10" bg="transparent">
+                </GridItem> */}
+                {/* <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
                         <Modal9
                             isOpen={isOpenModal9}
@@ -124,8 +124,8 @@ const Projects = ({ theme }) => {
                             onClose={onCloseModal9}
                         />
                     </Center>
-                </GridItem>
-                <GridItem colSpan={2} h="10" bg="transparent">
+                </GridItem> */}
+                {/* <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
                         <Modal7
                             isOpen={isOpenModal7}
@@ -133,7 +133,7 @@ const Projects = ({ theme }) => {
                             onClose={onCloseModal7}
                         />
                     </Center>
-                </GridItem>
+                </GridItem> */}
                 <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
                         <Modal6
@@ -143,7 +143,7 @@ const Projects = ({ theme }) => {
                         />
                     </Center>
                 </GridItem>
-                <GridItem colSpan={2} h="10" bg="transparent">
+                {/* <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
                         <Modal2
                             isOpen={isOpenModal2}
@@ -151,7 +151,7 @@ const Projects = ({ theme }) => {
                             onClose={onCloseModal2}
                         />
                     </Center>
-                </GridItem>
+                </GridItem> */}
                 <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
                         <Modal3
@@ -170,7 +170,7 @@ const Projects = ({ theme }) => {
                         />
                     </Center>
                 </GridItem>
-                <GridItem colSpan={2} h="10" bg="transparent">
+                {/* <GridItem colSpan={2} h="10" bg="transparent">
                     <Center>
                         <Modal1
                             isOpen={isOpenModal1}
@@ -178,7 +178,7 @@ const Projects = ({ theme }) => {
                             onClose={onCloseModal1}
                         />
                     </Center>
-                </GridItem>
+                </GridItem> */}
             </Grid>
         </Box>
     );

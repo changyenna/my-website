@@ -2,11 +2,20 @@ import React from 'react';
 import { Box, VStack, Text } from '@chakra-ui/react';
 
 const resumeItems = [
+        {
+        role: 'Programmer Analyst I',
+        company: 'San Bernardino County Auditor-Controller/Treasurer/Tax Collector - Information Technology Division',
+        type: 'Full-Time',
+        date: 'September 2025 - Present',
+        location: 'San Bernardino, CA',
+        bullet1:
+            'Full-stack developer for SB County ATC IT Division, contributing to the ATC website, building scalable integrations and workflows, supporting enterprise systems like TaxSys, and delivering automation tools, documentation, and cross-division technology solutions.'
+    },
     {
         role: 'Application Development & Support Intern',
-        company: 'San Bernardino County ATC - IT Division',
+        company: 'San Bernardino County Auditor-Controller/Treasurer/Tax Collector - Information Technology Division',
         type: 'Internship',
-        date: 'December 2025 - Present',
+        date: 'December 2024 - August 2025',
         location: 'San Bernardino, CA',
         bullet1:
             'Modernize applications, including redesigning the ATC website, by developing features in React.js and C#, integrating with Contentful and Microsoft SQL Server, adhering to Agile practices, leveraging CI/CD pipelines, and using GitHub for seamless integration and feature delivery'
