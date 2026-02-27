@@ -23,6 +23,8 @@ import PIN from '../assets/pin.png';
 // };
 
 const About = ({ theme }) => {
+    const [scrollBehavior, setScrollBehavior] = React.useState('inside');
+    
     const bgColors = useColorModeValue('light.100', 'dark.300');
     const titleBar = useColorModeValue('light.400', 'dark.800');
     const buttonColors = useColorModeValue('light.300', 'light.400');
@@ -57,20 +59,29 @@ const About = ({ theme }) => {
 
     return (
         <Box
+            overflow={scrollBehavior === 'inside' ? 'auto' : 'hidden'}
             // bg="red"
             margin={{
-                lg: '60px 0px 0',
-                md: '60px 0px 0',
-                sm: '60px 0px 0'
+                lg: '60px auto 0',
+                md: '60px auto 0',
+                sm: '60px auto 0'
             }}
             padding={{
                 lg: 5,
                 md: 5,
                 sm: 0
             }}
+            width="102%"
+            height={{
+                lg: '97%',
+                md: '97%',
+                sm: '117%'
+            }}
+            display="flex"
+            alignItems="flex-start"
+            justifyContent="flex-start"
             maxWidth="800px"
             // minHeight="460px"
-            // display="flex"
         >
             <Grid
                 templateAreas={templateAreas}
@@ -219,15 +230,14 @@ const About = ({ theme }) => {
                             Bio
                         </Text>
                         <Text fontSize={{ lg: 'md', md: 'md', sm: 'sm' }}>
-                            Hi there!👋 My name is Isabelle, and I am a programmer analyst. 
-                            I am currently working for the San Bernardino County Tax Collector's office (ATC), while also
-                            pursuing a Master's in Computer Science at Georgia
-                            Tech (online). I've always been the kind of person who is
+                            Hi there!👋 My name is Isabelle, and I'm a programmer analyst. You might also know me by my Korean name, Yenna, which is what my family and friends call me.
+                            I'm currently working for the San Bernardino County Tax Collector's office (ATC), 
+                            while also pursuing a Master's in Computer Science at Georgia
+                            Tech online. I've always been the kind of person who is
                             passionate about making creative ideas come to life
                             and have found a love for building projects through technology!
-                            When I'm not working on my programming
-                            skills, I love discovering new music on Spotify,
-                            hitting the gym, and spending time with my friends! Thanks for stopping by hehe.
+                            Outside of programming, I love discovering new music on Spotify, going skiing in the winter,
+                            hitting the gym, and spending time with my friends and loved ones! Thanks for stopping by hehe.
                         </Text>
                     </VStack>
                 </GridItem>
