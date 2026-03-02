@@ -2,40 +2,16 @@ import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
 const bg = `linear-gradient(180deg, white 2px, transparent 1px), linear-gradient(90deg, white 2px, transparent 1px), #F4D2E9`;
-// const bgGradient = `linear-gradient(to bottom, #6C6191, #EDA7C5, #FFFFFF)`;
-// const bgGradient = `linear-gradient(to bottom, #250B3E, #7D529A, #F48BA9)`;
-// const bgGradient = `linear-gradient(to bottom, #1A0C26, #7E519C, #F48BA9)`;
-// const bgGradient = `linear-gradient(to bottom, #2B0A3D, #B2499D, #EAA2C0)`;
-// const bgGradient = `linear-gradient(to bottom, #564B75, #CC769B)`;
-// const bgGradient = `linear-gradient(to bottom, #46234A, #A64F81)`;
-// const bgGradient = `linear-gradient(to bottom, #4C2B4E, #9E5B8B)`;
-// const bgGradient = `linear-gradient(to bottom, #6C6191, #916C78)`;
-// const bgGradient = `linear-gradient(to bottom, #C0A2EA, #EAA2C0)`;
-// const bgGradient = `linear-gradient(to top right, #4FD1C5, #ECC94B), linear-gradient(to top, #90CDF4, #319795), linear-gradient(to bottom, #FEEBC8, #B794F4)`;
 const bgGradient = `linear-gradient(to bottom, #6C6191, #EAA2C0)`;
-
-// bgGradient={[
-//     'linear(to-tr, teal.300, yellow.400)',
-//     'linear(to-t, blue.200, teal.500)',
-//     'linear(to-b, orange.100, purple.300)',
-//   ]}
-
-const breakpointsBackgroundSize = {
-    base: '100vw 100vh',
-    sm: '200vw 300vh',
-    md: '100vw 100vh',
-    lg: '100vw 100vh',
-    xl: '100vw 100vh'
-};
 
 const styles = {
     global: (props) => ({
         body: {
             bg: props.colorMode === 'light' ? bg : bgGradient,
-            backgroundSize:
-                props.colorMode === 'light'
-                    ? '60px 60px'
-                    : breakpointsBackgroundSize,
+            backgroundSize: props.colorMode === 'light' ? '60px 60px' : 'auto',
+            backgroundAttachment: props.colorMode === 'dark' ? 'fixed' : 'scroll',
+            backgroundRepeat: props.colorMode === 'dark' ? 'no-repeat' : 'repeat',
+            minHeight: '100vh',
             color: mode('light.900', 'dark.100')(props)
         }
     })
