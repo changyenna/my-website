@@ -71,11 +71,11 @@ const About = ({ theme }) => {
                 md: 5,
                 sm: 0
             }}
-            width="102%"
+            width="100%"
             height={{
                 lg: '97%',
-                md: '97%',
-                sm: '117%'
+                md: '84%',
+                sm: '107%'
             }}
             display="flex"
             alignItems="flex-start"
@@ -231,7 +231,7 @@ const About = ({ theme }) => {
                         </Text>
                         <Text fontSize={{ lg: 'md', md: 'md', sm: 'sm' }}>
                             Hi there!👋 My name is Isabelle, and I'm a programmer analyst. You might also know me by my Korean name, Yenna, which is what my family and friends call me.
-                            I'm currently working for the San Bernardino County Tax Collector's office (ATC), 
+                            I'm currently working as a programmer analyst full-time, 
                             while also pursuing a Master's in Computer Science at Georgia
                             Tech online. I've always been the kind of person who is
                             passionate about making creative ideas come to life
