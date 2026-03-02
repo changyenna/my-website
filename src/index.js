@@ -22,6 +22,7 @@ import { SlidingPanelProvider } from './pages/home/SlidingPanelContext';
 import FirstPanel from './pages/home/FirstPanel';
 import SecondPanel from './pages/home/SecondPanel';
 import Contact from './pages/Contact';
+import SpotifyCallback from './components/SpotifyCallback';
 // import Projects from './nav-bar/Projects';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -40,6 +41,7 @@ root.render(
                         <Route path="/firstPanel" element={<FirstPanel />} />
                         <Route path="/secondPanel" element={<SecondPanel />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/callback" element={<SpotifyCallback />} />
                     </Routes>
                 </BrowserRouter>
             </SlidingPanelProvider>
