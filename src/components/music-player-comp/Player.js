@@ -1,3 +1,14 @@
+// All the Spotify integration code is commented out, so you can easily uncomment it when you're ready to continue.
+
+// The music player now works with your original 12 hardcoded songs. When you want to switch back to Spotify:
+
+// Uncomment the Spotify imports at the top
+// Uncomment the Spotify state variables and useEffect
+// Comment out the hardcoded songpack array
+// Uncomment the loading/auth UI components
+// All the Spotify service files, setup guide, and callback route are still in place for when you're ready! 🎵
+
+
 import React, { useEffect, useState } from 'react';
 import {
     AiFillPauseCircle,
@@ -13,25 +24,109 @@ import {
     useColorModeValue,
     useColorMode,
     Progress,
-    Spacer,
-    Button,
-    Text,
-    Spinner
+    Spacer
 } from '@chakra-ui/react';
-import {
-    getTopTracks,
-    isAuthenticated,
-    redirectToSpotifyAuth
-} from '../../services/spotifyService';
+// import {
+//     getTopTracks,
+//     isAuthenticated,
+//     redirectToSpotifyAuth
+// } from '../../services/spotifyService';
 
 const Player = ({ theme }) => {
+    const songpack = [
+        {
+            name: 'Always (feat. Summer Walker) - Bonus',
+            artist: 'Daniel Caesar',
+            src: 'https://p.scdn.co/mp3-preview/577bd31a9ccf2d8f4b49cccc984aa87ecd7f616a?cid=ad35e59f7186495d89b79b327ad0f987',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b273e242f18dafe885fcf425fe1f'
+        },
+        {
+            name: 'Dreams, Fairytales, Fantasies ...',
+            artist: 'A$AP Ferg, Brent Faiyaz, Salaam Remi',
+            src: 'https://p.scdn.co/mp3-preview/02788afc758468a99a8ed287118abb6a81217180',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b27380dacac510e9d085a591f981'
+        },
+        {
+            name: 'Guilty Conscience',
+            artist: '070 Shake',
+            src: 'https://p.scdn.co/mp3-preview/d5dc8db7dfd2fb335ec8867502c5a9e5b3477f2e',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b27320921767dd81e8f90ef9fc71'
+        },
+        {
+            name: "You Don't Ignore (Midnight)",
+            artist: 'Petit Biscuit',
+            src: 'https://p.scdn.co/mp3-preview/4fbc1cbfd5f3465515dd0d2cd38242350591ced8',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b273824f97701e1347415da80bd8'
+        },
+        {
+            name: 'Magic',
+            artist: 'Kiana Lede',
+            src: 'https://p.scdn.co/mp3-preview/c5695d1982656e0c860c3cc83f3aca1829bc3a7a?cid=ad35e59f7186495d89b79b327ad0f987',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b273fe9b672433be22472bd30e7a'
+        },
+        {
+            name: 'THE SHADE',
+            artist: 'Rex Orange County',
+            src: 'https://p.scdn.co/mp3-preview/b62081b11cc9821d10922900bc290eaf459d7e84',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b2735b656d32ea6b0b9c54c2d2e0'
+        },
+        {
+            name: 'say im ur luv',
+            artist: 'UMI',
+            src: 'https://p.scdn.co/mp3-preview/2fc8f7d27a4556f73f32d63e981d0e4a5f2e2e2b?cid=ad35e59f7186495d89b79b327ad0f987',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b2733b289c8a149cc52b49d5dc78'
+        },
+        {
+            name: 'Vince Van Gogh',
+            artist: 'Daniel Caesar',
+            src: 'https://p.scdn.co/mp3-preview/afbe3797c0bf86b5c790d95d88d9309e24776948?cid=ad35e59f7186495d89b79b327ad0f987',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b273e242f18dafe885fcf425fe1f'
+        },
+        {
+            name: 'Cookie',
+            artist: 'NewJeans',
+            src: 'https://p.scdn.co/mp3-preview/d059b8ea163242692099c452cbed3de596c2e624',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b2739d28fd01859073a3ae6ea209'
+        },
+        {
+            name: 'Heartbreak Anniversary',
+            artist: 'Giveon',
+            src: 'https://p.scdn.co/mp3-preview/12200deba2a2f8126ff4430d35fec1be2969e87f',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b2733317fc12f8b9a9a0b8459766'
+        },
+        {
+            name: 'get him back!',
+            artist: 'Olivia Rodrigo',
+            src: 'https://p.scdn.co/mp3-preview/8b5805a0fb24641ff34f1649ab448a16c219f073',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d0000b273e85259a1cae29a8d91f2093d'
+        },
+        {
+            name: 'ASAP',
+            artist: 'NewJeans',
+            src: 'https://p.scdn.co/mp3-preview/6e580649e577986e9f28e7b7c5e7326577bd9605',
+            thumbnail:
+                'https://i.scdn.co/image/ab67616d00001e020744690248ef3ba7b776ea7b'
+        }
+    ];
+
     const { colorMode } = useColorMode();
     
-    // Spotify integration states
-    const [songpack, setSongpack] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [authenticated, setAuthenticated] = useState(false);
+    // Spotify integration states (commented out for now)
+    // const [songpack, setSongpack] = useState([]);
+    // const [isLoading, setIsLoading] = useState(true);
+    // const [error, setError] = useState(null);
+    // const [authenticated, setAuthenticated] = useState(false);
     const [song, setSong] = useState(new Audio());
     const [currentSong, setCurrentSong] = useState(0);
     const [playing, setPlaying] = useState(false);
@@ -51,38 +146,38 @@ const Player = ({ theme }) => {
     const [prevHovered, setPrevHovered] = useState(false);
     const [nextHovered, setNextHovered] = useState(false);
 
-    // Check authentication and fetch tracks
-    useEffect(() => {
-        const fetchSpotifyTracks = async () => {
-            setIsLoading(true);
-            setAuthenticated(isAuthenticated());
-            
-            if (!isAuthenticated()) {
-                setIsLoading(false);
-                return;
-            }
+    // Check authentication and fetch tracks (commented out for now)
+    // useEffect(() => {
+    //     const fetchSpotifyTracks = async () => {
+    //         setIsLoading(true);
+    //         setAuthenticated(isAuthenticated());
+    //         
+    //         if (!isAuthenticated()) {
+    //             setIsLoading(false);
+    //             return;
+    //         }
 
-            try {
-                const tracks = await getTopTracks('short_term', 12);
-                // Filter out tracks without preview URLs
-                const tracksWithPreviews = tracks.filter(track => track.src);
-                
-                if (tracksWithPreviews.length === 0) {
-                    setError('No preview tracks available. Try different time period.');
-                } else {
-                    setSongpack(tracksWithPreviews);
-                }
-            } catch (err) {
-                console.error('Error fetching Spotify tracks:', err);
-                setError('Failed to load tracks from Spotify. Please try reconnecting.');
-                setAuthenticated(false);
-            } finally {
-                setIsLoading(false);
-            }
-        };
+    //         try {
+    //             const tracks = await getTopTracks('short_term', 12);
+    //             // Filter out tracks without preview URLs
+    //             const tracksWithPreviews = tracks.filter(track => track.src);
+    //             
+    //             if (tracksWithPreviews.length === 0) {
+    //                 setError('No preview tracks available. Try different time period.');
+    //             } else {
+    //                 setSongpack(tracksWithPreviews);
+    //             }
+    //         } catch (err) {
+    //             console.error('Error fetching Spotify tracks:', err);
+    //             setError('Failed to load tracks from Spotify. Please try reconnecting.');
+    //             setAuthenticated(false);
+    //         } finally {
+    //             setIsLoading(false);
+    //         }
+    //     };
 
-        fetchSpotifyTracks();
-    }, []);
+    //     fetchSpotifyTracks();
+    // }, []);
 
     useEffect(() => {
         load();
@@ -102,8 +197,6 @@ const Player = ({ theme }) => {
     }, [currentSong]);
 
     const load = () => {
-        if (songpack.length === 0) return;
-        
         setPlaying(false);
         setCurrentTime(0);
 
@@ -180,127 +273,127 @@ const Player = ({ theme }) => {
         setNextHovered(!nextHovered);
     };
 
-    const handleConnectSpotify = () => {
-        redirectToSpotifyAuth();
-    };
+    // const handleConnectSpotify = () => {
+    //     redirectToSpotifyAuth();
+    // };
 
-    // Loading state
-    if (isLoading) {
-        return (
-            <Box
-                className="player"
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-                width={{ lg: '500px', md: '450px', sm: '350px' }}
-                height="500px"
-                margin={{
-                    lg: '15px auto 15px',
-                    md: '15px auto 15px',
-                    sm: '15px auto 15px'
-                }}
-            >
-                <VStack spacing={4}>
-                    <Spinner
-                        thickness="4px"
-                        speed="0.65s"
-                        emptyColor="gray.200"
-                        color="pink.500"
-                        size="xl"
-                    />
-                    <Text color={textColors}>Loading your music...</Text>
-                </VStack>
-            </Box>
-        );
-    }
+    // Loading state (commented out for now)
+    // if (isLoading) {
+    //     return (
+    //         <Box
+    //             className="player"
+    //             display="flex"
+    //             flexDirection="column"
+    //             alignItems="center"
+    //             justifyContent="center"
+    //             width={{ lg: '500px', md: '450px', sm: '350px' }}
+    //             height="500px"
+    //             margin={{
+    //                 lg: '15px auto 15px',
+    //                 md: '15px auto 15px',
+    //                 sm: '15px auto 15px'
+    //             }}
+    //         >
+    //             <VStack spacing={4}>
+    //                 <Spinner
+    //                     thickness="4px"
+    //                     speed="0.65s"
+    //                     emptyColor="gray.200"
+    //                     color="pink.500"
+    //                     size="xl"
+    //                 />
+    //                 <Text color={textColors}>Loading your music...</Text>
+    //             </VStack>
+    //         </Box>
+    //     );
+    // }
 
-    // Not authenticated state
-    if (!authenticated) {
-        return (
-            <Box
-                className="player"
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-                width={{ lg: '500px', md: '450px', sm: '350px' }}
-                height="500px"
-                margin={{
-                    lg: '15px auto 15px',
-                    md: '15px auto 15px',
-                    sm: '15px auto 15px'
-                }}
-            >
-                <VStack spacing={6} textAlign="center" px={6}>
-                    <Icon
-                        as={AiFillPlayCircle}
-                        w="80px"
-                        h="80px"
-                        color={textColors}
-                        opacity={0.3}
-                    />
-                    <Text color={textColors} fontSize="xl" fontWeight="bold">
-                        Connect Your Spotify
-                    </Text>
-                    <Text color={textColors} fontSize="sm">
-                        Sign in with your Spotify account to see your top tracks
-                    </Text>
-                    <Button
-                        colorScheme="green"
-                        size="lg"
-                        onClick={handleConnectSpotify}
-                        borderRadius="full"
-                        px={8}
-                    >
-                        Connect to Spotify
-                    </Button>
-                    {error && (
-                        <Text color="red.500" fontSize="sm">
-                            {error}
-                        </Text>
-                    )}
-                </VStack>
-            </Box>
-        );
-    }
+    // Not authenticated state (commented out for now)
+    // if (!authenticated) {
+    //     return (
+    //         <Box
+    //             className="player"
+    //             display="flex"
+    //             flexDirection="column"
+    //             alignItems="center"
+    //             justifyContent="center"
+    //             width={{ lg: '500px', md: '450px', sm: '350px' }}
+    //             height="500px"
+    //             margin={{
+    //                 lg: '15px auto 15px',
+    //                 md: '15px auto 15px',
+    //                 sm: '15px auto 15px'
+    //             }}
+    //         >
+    //             <VStack spacing={6} textAlign="center" px={6}>
+    //                 <Icon
+    //                     as={AiFillPlayCircle}
+    //                     w="80px"
+    //                     h="80px"
+    //                     color={textColors}
+    //                     opacity={0.3}
+    //                 />
+    //                 <Text color={textColors} fontSize="xl" fontWeight="bold">
+    //                     Connect Your Spotify
+    //                 </Text>
+    //                 <Text color={textColors} fontSize="sm">
+    //                     Sign in with your Spotify account to see your top tracks
+    //                 </Text>
+    //                 <Button
+    //                     colorScheme="green"
+    //                     size="lg"
+    //                     onClick={handleConnectSpotify}
+    //                     borderRadius="full"
+    //                     px={8}
+    //                 >
+    //                     Connect to Spotify
+    //                 </Button>
+    //                 {error && (
+    //                     <Text color="red.500" fontSize="sm">
+    //                         {error}
+    //                     </Text>
+    //                 )}
+    //             </VStack>
+    //         </Box>
+    //     );
+    // }
 
-    // Error state with retry
-    if (error && songpack.length === 0) {
-        return (
-            <Box
-                className="player"
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-                width={{ lg: '500px', md: '450px', sm: '350px' }}
-                height="500px"
-                margin={{
-                    lg: '15px auto 15px',
-                    md: '15px auto 15px',
-                    sm: '15px auto 15px'
-                }}
-            >
-                <VStack spacing={6} textAlign="center" px={6}>
-                    <Text color={textColors} fontSize="xl" fontWeight="bold">
-                        Oops!
-                    </Text>
-                    <Text color={textColors} fontSize="sm">
-                        {error}
-                    </Text>
-                    <Button
-                        colorScheme="pink"
-                        size="md"
-                        onClick={handleConnectSpotify}
-                        borderRadius="full"
-                    >
-                        Reconnect to Spotify
-                    </Button>
-                </VStack>
-            </Box>
-        );
-    }
+    // Error state with retry (commented out for now)
+    // if (error && songpack.length === 0) {
+    //     return (
+    //         <Box
+    //             className="player"
+    //             display="flex"
+    //             flexDirection="column"
+    //             alignItems="center"
+    //             justifyContent="center"
+    //             width={{ lg: '500px', md: '450px', sm: '350px' }}
+    //             height="500px"
+    //             margin={{
+    //                 lg: '15px auto 15px',
+    //                 md: '15px auto 15px',
+    //                 sm: '15px auto 15px'
+    //             }}
+    //         >
+    //             <VStack spacing={6} textAlign="center" px={6}>
+    //                 <Text color={textColors} fontSize="xl" fontWeight="bold">
+    //                     Oops!
+    //                 </Text>
+    //                 <Text color={textColors} fontSize="sm">
+    //                     {error}
+    //                 </Text>
+    //                 <Button
+    //                     colorScheme="pink"
+    //                     size="md"
+    //                     onClick={handleConnectSpotify}
+    //                     borderRadius="full"
+    //                 >
+    //                     Reconnect to Spotify
+    //                 </Button>
+    //             </VStack>
+    //         </Box>
+    //     );
+    // }
 
     return (
         <Box
@@ -331,7 +424,6 @@ const Player = ({ theme }) => {
                     backgroundRepeat="no-repeat"
                     backgroundPosition="bottom center"
                     backgroundSize="cover"
-                    fallbackSrc="fallback-image-url.jpg"
                 ></Box>
                 <Box>
                     <Box
