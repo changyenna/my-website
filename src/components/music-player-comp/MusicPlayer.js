@@ -176,7 +176,7 @@ const MusicPlayer = () => {
                             </Box>
                             <Box color={textColors} pointerEvents="none">
                                 <Text fontSize="md">
-                                    My top tracks this month
+                                    Music Player
                                 </Text>
                             </Box>
 
